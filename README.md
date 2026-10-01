@@ -129,6 +129,12 @@ pytest
 - The raw-log licenses are not stated by their sources. This repo publishes only fitted parameters and summaries,
   and `scripts/fetch.sh` downloads the logs from their original locations.
 
+## Studies
+
+- [`studies/phase4_gate/`](studies/phase4_gate/FINDINGS.md): can a different joint structure shrink the unit-to-unit gap?
+  Linkage ratios and paralleled servos cut the powered gap by 40-53% but grew the back-driven gap 1.4-3.8x.
+  The back-driven gap peaks when friction is comparable to the load (Korean).
+
 ## Related
 
 - [simdiff-check](https://github.com/bluvtx09/simdiff-check): a linter for MuJoCo and PyBullet settings that silently break results.

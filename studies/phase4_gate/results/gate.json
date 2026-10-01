@@ -1,0 +1,208 @@
+{
+ "dt_5ms": {
+  "S0": {
+   "ratio": 1,
+   "kp_scale": 1,
+   "powered_deg": 0.6811129673849975,
+   "backdriven_deg": 6.576239193516429,
+   "all_deg": 1.4661472764981667,
+   "backdriven_travel_deg_per_log": 2558.4018890911175,
+   "by_direction": {
+    "powered": [
+     0.6811129673849975,
+     0.6811129673849975
+    ],
+    "backdriven": [
+     6.576239193516429,
+     6.576239193516429
+    ]
+   },
+   "cut_powered": 0.0,
+   "cut_backdriven": 0.0
+  },
+  "S1": {
+   "ratio": 1,
+   "kp_scale": 4,
+   "powered_deg": 0.3635925877250745,
+   "backdriven_deg": 6.633985032963531,
+   "all_deg": 1.198599848349329,
+   "backdriven_travel_deg_per_log": 2977.9076665198713,
+   "by_direction": {
+    "powered": [
+     0.3635925877250745,
+     0.3635925877250745
+    ],
+    "backdriven": [
+     6.633985032963531,
+     6.633985032963531
+    ]
+   },
+   "cut_powered": 0.46617873225785367,
+   "cut_backdriven": -0.008780982222184708
+  },
+  "S2": {
+   "ratio": 2,
+   "kp_scale": 1,
+   "powered_deg": 0.4062347099436602,
+   "backdriven_deg": 14.999057345044532,
+   "all_deg": 2.349512257517927,
+   "backdriven_travel_deg_per_log": 1647.0640584703008,
+   "by_direction": {
+    "powered": [
+     0.4062347099436602,
+     0.4062347099436602
+    ],
+    "backdriven": [
+     14.999057345044532,
+     14.999057345044532
+    ]
+   },
+   "cut_powered": 0.4035721981577881,
+   "cut_backdriven": -1.2807955890400446
+  },
+  "S2b": {
+   "ratio": 4,
+   "kp_scale": 1,
+   "powered_deg": 0.4050137381263366,
+   "backdriven_deg": 24.823055541886088,
+   "all_deg": 3.6566829716603437,
+   "backdriven_travel_deg_per_log": 866.3805595731819,
+   "by_direction": {
+    "powered": [
+     0.4050137381263366,
+     0.4050137381263366
+    ],
+    "backdriven": [
+     24.823055541886088,
+     24.823055541886088
+    ]
+   },
+   "cut_powered": 0.4053648109486021,
+   "cut_backdriven": -2.7746582524491132
+  },
+  "S3": {
+   "ratio": 1,
+   "kp_scale": 1,
+   "powered_deg": 0.3180332909753808,
+   "backdriven_deg": 9.401163113971048,
+   "all_deg": 1.527603412404304,
+   "backdriven_travel_deg_per_log": 1664.7761873379682,
+   "by_direction": {
+    "powered": [
+     0.3258774553804688,
+     0.31018912657029285
+    ],
+    "backdriven": [
+     9.583177421227704,
+     9.219148806714394
+    ]
+   },
+   "cut_powered": 0.5330682189234943,
+   "cut_backdriven": -0.42956526326471467
+  },
+  "gate_pass": false
+ },
+ "dt_1ms": {
+  "S0": {
+   "ratio": 1,
+   "kp_scale": 1,
+   "powered_deg": 0.6830224631933159,
+   "backdriven_deg": 6.561680482259347,
+   "all_deg": 1.4658637560656094,
+   "backdriven_travel_deg_per_log": 2559.838946487893,
+   "by_direction": {
+    "powered": [
+     0.6830224631933159,
+     0.6830224631933159
+    ],
+    "backdriven": [
+     6.561680482259347,
+     6.561680482259347
+    ]
+   },
+   "cut_powered": 0.0,
+   "cut_backdriven": 0.0
+  },
+  "S1": {
+   "ratio": 1,
+   "kp_scale": 4,
+   "powered_deg": 0.367471172360081,
+   "backdriven_deg": 6.621448628995763,
+   "all_deg": 1.2002925036687324,
+   "backdriven_travel_deg_per_log": 2978.655526389389,
+   "by_direction": {
+    "powered": [
+     0.367471172360081,
+     0.367471172360081
+    ],
+    "backdriven": [
+     6.621448628995763,
+     6.621448628995763
+    ]
+   },
+   "cut_powered": 0.46199255198423017,
+   "cut_backdriven": -0.009108664601699124
+  },
+  "S2": {
+   "ratio": 2,
+   "kp_scale": 1,
+   "powered_deg": 0.4109031345266366,
+   "backdriven_deg": 14.976791527520563,
+   "all_deg": 2.350593938860327,
+   "backdriven_travel_deg_per_log": 1648.742228176071,
+   "by_direction": {
+    "powered": [
+     0.4109031345266366,
+     0.4109031345266366
+    ],
+    "backdriven": [
+     14.976791527520563,
+     14.976791527520563
+    ]
+   },
+   "cut_powered": 0.3984046547963407,
+   "cut_backdriven": -1.2824627880026989
+  },
+  "S2b": {
+   "ratio": 4,
+   "kp_scale": 1,
+   "powered_deg": 0.4098326277897369,
+   "backdriven_deg": 24.816699622354623,
+   "all_deg": 3.6600137492326272,
+   "backdriven_travel_deg_per_log": 867.6363167152108,
+   "by_direction": {
+    "powered": [
+     0.4098326277897369,
+     0.4098326277897369
+    ],
+    "backdriven": [
+     24.816699622354623,
+     24.816699622354623
+    ]
+   },
+   "cut_powered": 0.39997196303960814,
+   "cut_backdriven": -2.7820646234529276
+  },
+  "S3": {
+   "ratio": 1,
+   "kp_scale": 1,
+   "powered_deg": 0.31915622853108705,
+   "backdriven_deg": 9.390073862384856,
+   "all_deg": 1.5271000934392807,
+   "backdriven_travel_deg_per_log": 1666.172768019373,
+   "by_direction": {
+    "powered": [
+     0.3253368447042931,
+     0.312975612357881
+    ],
+    "backdriven": [
+     9.581326114070604,
+     9.198821610699106
+    ]
+   },
+   "cut_powered": 0.5327295283394564,
+   "cut_backdriven": -0.43104710565724225
+  },
+  "gate_pass": false
+ }
+}

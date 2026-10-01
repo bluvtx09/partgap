@@ -1,0 +1,62 @@
+[
+ {
+  "ratio": 1,
+  "friction_scale": 0.1,
+  "backdriven_gap_deg": 3.382487530845537,
+  "fall_travel_deg_per_log": 12218.059235639043
+ },
+ {
+  "ratio": 1,
+  "friction_scale": 0.25,
+  "backdriven_gap_deg": 4.590106609629971,
+  "fall_travel_deg_per_log": 8832.353978088617
+ },
+ {
+  "ratio": 1,
+  "friction_scale": 0.5,
+  "backdriven_gap_deg": 5.342118012412252,
+  "fall_travel_deg_per_log": 5211.948258458253
+ },
+ {
+  "ratio": 1,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 6.576239193516429,
+  "fall_travel_deg_per_log": 2558.4018890911175
+ },
+ {
+  "ratio": 2,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 14.999057345044532,
+  "fall_travel_deg_per_log": 1647.0640584703008
+ },
+ {
+  "ratio": 4,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 24.823055541886088,
+  "fall_travel_deg_per_log": 866.3805595731819
+ },
+ {
+  "ratio": 8,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 8.218891224111978,
+  "fall_travel_deg_per_log": 291.9496183611322
+ },
+ {
+  "ratio": 16,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 3.325919204278799,
+  "fall_travel_deg_per_log": 90.93531482522687
+ },
+ {
+  "ratio": 32,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 1.9491829054771632,
+  "fall_travel_deg_per_log": 51.66592713080925
+ },
+ {
+  "ratio": 64,
+  "friction_scale": 1,
+  "backdriven_gap_deg": 1.0437411341408698,
+  "fall_travel_deg_per_log": 26.984165473403745
+ }
+]
