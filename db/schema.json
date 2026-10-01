@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bluvtx09/partgap/db/schema.json",
+  "title": "PartGap part entry v0.1",
+  "description": "One entry per part model (e.g. Feetech STS3215 7.4V). Holds identified actuator parameters, where they were measured, how large the remaining simulation error is, and how far the entry can be trusted outside the measured conditions.",
+  "type": "object",
+  "required": ["part", "sources", "conditions", "identifications", "error", "transfer"],
+  "properties": {
+    "part": {
+      "type": "object",
+      "required": ["id", "manufacturer", "model", "control"],
+      "properties": {
+        "id": {"type": "string", "description": "partgap id, e.g. feetech_sts3215_7v4"},
+        "manufacturer": {"type": "string"},
+        "model": {"type": "string"},
+        "variant": {"type": "string", "description": "voltage / gear-ratio variant if the product name covers several"},
+        "nominal_vin": {"type": "number", "description": "V"},
+        "control": {"type": "string", "enum": ["voltage_p_firmware", "current_p_firmware"], "description": "how the firmware turns a goal position into motor drive"},
+        "bam_actuator": {"type": "string", "description": "actuator class name in BAM"}
+      }
+    },
+    "sources": {
+      "type": "array",
+      "description": "Every dataset that went into this entry. One source = one physical unit on one test bench.",
+      "items": {
+        "type": "object",
+        "required": ["name", "url", "unit", "n_logs"],
+        "properties": {
+          "name": {"type": "string"},
+          "url": {"type": "string"},
+          "license": {"type": "string"},
+          "unit": {"type": "string", "description": "unit id inside the source (physical motor)"},
+          "lab": {"type": "string"},
+          "n_logs": {"type": "integer"},
+          "bench": {"type": "string", "description": "test bench, e.g. single pendulum"}
+        }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "description": "Range of conditions the logs cover. A query outside these ranges is an extrapolation and is flagged.",
+      "properties": {
+        "kp": {"type": "array", "items": {"type": "number"}},
+        "vin": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+        "load_inertia": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2, "description": "kg m^2 at the output shaft"},
+        "gravity_torque_max": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2, "description": "N m, (mass + arm_mass/2) g L"},
+        "temperature_c": {"type": ["array", "null"], "items": {"type": "number"}},
+        "trajectories": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "identifications": {
+      "type": "object",
+      "description": "Identified parameters per friction model. m1 = Coulomb + viscous (native in MuJoCo/PyBullet). m6 = BAM extended model (needs the BAM plugin).",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["params", "fitter", "fit_on"],
+        "properties": {
+          "params": {"type": "object"},
+          "fitter": {"type": "string"},
+          "fit_on": {"type": "string", "description": "which logs: 'all'"},
+          "bam_commit": {"type": "string"}
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "description": "Held-out open-loop position error (mean absolute, degrees) on the random 80/20 split, per model. b0 = no identification (start values, no friction).",
+      "properties": {
+        "b0_deg": {"type": "number"},
+        "m1_deg": {"type": "number"},
+        "m6_deg": {"type": "number"},
+        "by_condition": {"type": "object", "description": "m1/m6 error of the all-logs fit, broken down by kp, load group and trajectory"}
+      }
+    },
+    "transfer": {
+      "type": "object",
+      "description": "How much the error grows when the entry is used outside what it was fit on. ratio = held-out-condition error / error of a fit that saw that condition, on the same logs.",
+      "properties": {
+        "heavier_load": {"type": "object"},
+        "higher_kp": {"type": "object"},
+        "unseen_trajectory": {"type": "object"},
+        "other_unit": {"type": ["object", "null"], "description": "only when a second unit of the same model exists"}
+      }
+    }
+  }
+}

@@ -53,6 +53,10 @@ PartGap의 사업 가정은 하나다. **"부품 모델(예: STS3215)마다 한 
 
 **Q0 DB 값 (기술 통계).** 부품별로 B0 / M1 / M6의 무작위 분할 테스트 MAE. "이 부품을 MuJoCo 기본 마찰로 넣으면 몇 도가 남는가"가 DB 항목의 핵심 숫자다.
 
+**Q4 MuJoCo 내보내기 (API 검증).** 조회 API는 M1 파라미터를 MuJoCo 기본 위치 액추에이터 설정(kp, forcerange, damping, frictionloss, armature)으로 바꿔 준다.
+그 설정으로 MuJoCo 3.14.0에서 진자 로그를 다시 굴린 MAE가, 같은 파라미터로 BAM 시뮬을 굴린 MAE의 1.2배 이내이면 통과.
+펌웨어의 목표 속도 제한(Feetech, Waveshare)과 명령 지연은 ctrl 앞단에서 같은 식으로 처리한다. MuJoCo dt는 로그와 같은 5 ms이고, 1 ms로도 한 번 더 굴려 수치 오차를 따로 본다.
+
 ## 하지 않는 것
 
 - 직접 측정. 이번 단계는 공개 데이터만으로 Phase 3 진입 조건을 판정한다.
