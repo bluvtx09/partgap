@@ -1,0 +1,4 @@
+__pycache__/
+external/
+data/processed/
+*.pyc
