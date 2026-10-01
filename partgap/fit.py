@@ -8,7 +8,7 @@ from cmaes import CMA
 from .evaluate import make_model, score
 
 
-def fit(part, model_name, batch, budget=3000, seed=0, fixed=None, start=None, restarts=1):
+def fit(part, model_name, batch, budget=3000, seed=0, fixed=None, start=None, restarts=1, sigma=0.25):
     """Return (best_params, best_score). `fixed` = {name: value} kept constant."""
     fixed = fixed or {}
     proto = make_model(part, model_name, start)
@@ -29,7 +29,7 @@ def fit(part, model_name, batch, budget=3000, seed=0, fixed=None, start=None, re
     per_run = budget // restarts
     for r in range(restarts):
         mean = x0 if r == 0 else rng.uniform(0.1, 0.9, len(names))
-        opt = CMA(mean=mean, sigma=0.25, bounds=np.array([[0.0, 1.0]] * len(names)), seed=seed + r)
+        opt = CMA(mean=mean, sigma=sigma if r == 0 else 0.25, bounds=np.array([[0.0, 1.0]] * len(names)), seed=seed + r)
         run_used = 0
         while run_used < per_run and not opt.should_stop():
             sols = []
