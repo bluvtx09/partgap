@@ -1,6 +1,6 @@
 """Score every fit on its test logs and answer P0, Q0-Q3 of PLAN.md.
 
-python experiments/analyze.py   -> results/analysis.json (+ printed tables)
+python experiments/analyze.py [results/fits_v2 | results/fits]   -> results/analysis.json (v2) or analysis_v1.json
 """
 import json
 import os
@@ -18,7 +18,8 @@ PARTS = ["dynamixel_mx64", "dynamixel_mx106", "dynamixel_xl330", "feetech_sts321
          "feetech_sts3215_12v", "waveshare_st3025"]
 PUBLISHED = {"dynamixel_mx64": "mx64", "dynamixel_mx106": "mx106", "dynamixel_xl330": "xl330",
              "feetech_sts3215_7v4": "feetech_sts3215_7_4V", "waveshare_st3025": "waveshare_st3025"}
-FITS = os.path.join(ROOT, "results", "fits")
+FITS = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else "results/fits_v2")
+OUTNAME = "analysis.json" if len(sys.argv) <= 1 or sys.argv[1].endswith("fits_v2") else "analysis_v1.json"
 B0 = {"friction_base": 0.0, "friction_viscous": 0.0}   # start values, no friction
 deg = np.degrees
 
@@ -65,6 +66,22 @@ def main():
                 out["q1"][f"{part}/{m}/{split}"] = {
                     "n_test": len(f["test"]), "heldout_deg": float(deg(held.mean())), "seen_deg": float(deg(ref.mean())),
                     "ratio": float(held.mean() / ref.mean()), "pass": bool(held.mean() <= 1.5 * ref.mean())}
+        # Q1 mechanism (exploratory, added after v1 showed lift_and_drop failing): error during
+        # torque-on vs torque-off phases of the held-out lift_and_drop logs
+        from partgap.evaluate import simulate as _sim
+        for m in ["m1", "m6"]:
+            f = fitp(part, m, "traj")
+            sel = [l for l in logs if l["filename"] in set(f["test"])]
+            b = make_batch(sel)
+            off = np.array([~e["torque_enable"].astype(bool) for e in b["entries"]])
+            ref = np.array([e["position"] for e in b["entries"]])
+            row = {}
+            for name, pr in [("heldout", f["params"]), ("seen", fitp(part, m, "full")["params"])]:
+                pos = np.array(_sim.Simulator(make_model(part, m, pr)).rollout_log(b, simulate_control=True)[0])
+                err = np.abs(pos - ref)
+                row[f"{name}_on_deg"] = float(deg(err[~off].mean()))
+                row[f"{name}_off_deg"] = float(deg(err[off].mean()))
+            out.setdefault("q1_mechanism", {})[f"{part}/{m}"] = row
         # Q0: random split, test logs
         rnd = {m: fitp(part, m, "random") for m in ["m1", "m6"]}
         test = rnd["m1"]["test"]
@@ -100,7 +117,7 @@ def main():
             r[f"{k}_cut_vs_b0"] = 1 - v / r["b0_deg"]
             r[f"{k}_pass"] = bool(v <= 1.5 * r["own_deg"] and (1 - v / r["b0_deg"]) >= 0.5)
         out["q2"][m] = r
-    json.dump(out, open(os.path.join(ROOT, "results", "analysis.json"), "w"), indent=1)
+    json.dump(out, open(os.path.join(ROOT, "results", OUTNAME), "w"), indent=1)
 
     print("P0 (all logs, mine vs published)")
     for k, v in out["p0"].items():
@@ -111,6 +128,9 @@ def main():
     print("Q1 (held-out condition / seen, same logs)")
     for k, v in out["q1"].items():
         print(f"  {k:32s} n={v['n_test']:3d} {v['heldout_deg']:.3f} / {v['seen_deg']:.3f} = x{v['ratio']:.2f} {'ok' if v['pass'] else 'FAIL'}")
+    print("Q1 mechanism (lift_and_drop held out): torque on / off error, held-out vs seen")
+    for k, v in out["q1_mechanism"].items():
+        print(f"  {k:28s} on {v['heldout_on_deg']:.2f} vs {v['seen_on_deg']:.2f}   off {v['heldout_off_deg']:.2f} vs {v['seen_off_deg']:.2f}")
     print("Q2", json.dumps(out["q2"], indent=1))
     print("Q3", json.dumps(out["q3"], indent=1))
 

@@ -56,7 +56,7 @@ def main():
     os.makedirs(os.path.join(ROOT, "db", "parts"), exist_ok=True)
     for part, m in META.items():
         logs = load_logs(part)
-        fits = {mm: json.load(open(os.path.join(ROOT, "results", "fits", f"{part}__{mm}__full.json")))
+        fits = {mm: json.load(open(os.path.join(ROOT, "results", "fits_v2", f"{part}__{mm}__full.json")))
                 for mm in ["m1", "m6"]}
         q0 = a["q0"][part]
         other = None

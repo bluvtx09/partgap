@@ -82,7 +82,7 @@ def main(source="fits"):
                 continue
             params = json.load(open(os.path.join(ROOT, "external/bam/bam/params", PUBLISHED[part], "m1.json")))
         else:
-            params = json.load(open(os.path.join(ROOT, "results/fits", f"{part}__m1__full.json")))["params"]
+            params = json.load(open(os.path.join(ROOT, "results/fits_v2", f"{part}__m1__full.json")))["params"]
         logs = load_logs(part)
         for l in logs:
             l["part"] = part
@@ -92,7 +92,7 @@ def main(source="fits"):
         r = {"n": len(logs), "bam_deg": float(np.degrees(bam.mean())), "mujoco_5ms_deg": float(np.degrees(mj5.mean())),
              "mujoco_1ms_deg": float(np.degrees(mj1.mean())),
              "ratio_5ms": float(mj5.mean() / bam.mean()), "ratio_1ms": float(mj1.mean() / bam.mean()),
-             "per_log_ratio_p90_5ms": float(np.percentile(mj5 / bam, 90)),
+             "per_log_ratio_p90_5ms": float(np.percentile(mj5[bam > 1e-6] / bam[bam > 1e-6], 90)),
              "pass": bool(mj5.mean() <= 1.2 * bam.mean())}
         rows[part] = r
         print(f"{part:22s} BAM {r['bam_deg']:.3f}  MuJoCo 5ms {r['mujoco_5ms_deg']:.3f} (x{r['ratio_5ms']:.2f})  "

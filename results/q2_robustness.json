@@ -1,0 +1,36 @@
+{
+ "m1": {
+  "own_insample": {
+   "all_deg": 1.1905637954833443,
+   "torque_on_deg": 0.39788145060226554,
+   "torque_off_deg": 5.210285609792668
+  },
+  "direct": {
+   "all_deg": 7.509428112194327,
+   "torque_on_deg": 4.05885022429512,
+   "torque_off_deg": 25.007437620710274
+  },
+  "friction_only": {
+   "all_deg": 4.410860664488424,
+   "torque_on_deg": 0.5081228981620003,
+   "torque_off_deg": 24.2017898256327
+  }
+ },
+ "m6": {
+  "own_insample": {
+   "all_deg": 1.1121324164292459,
+   "torque_on_deg": 0.9953135738664445,
+   "torque_off_deg": 1.704525135662202
+  },
+  "direct": {
+   "all_deg": 7.494273221819711,
+   "torque_on_deg": 3.743719324555836,
+   "torque_off_deg": 26.5134722918283
+  },
+  "friction_only": {
+   "all_deg": 4.410802337034951,
+   "torque_on_deg": 0.2884447983316408,
+   "torque_off_deg": 25.31543157687779
+  }
+ }
+}
