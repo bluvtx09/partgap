@@ -23,11 +23,13 @@ The thresholds and splits were fixed before the results were seen ([`PLAN.md`](P
   within 1.5x in 11 of 12 cases. Holding out the highest P gain kept it within 1.5x in 12 of 12.
 - **Back-driven motion does not carry over.** Back-driven means the torque is off and the load drives the gearbox.
   A fit that never saw a drop test was off by 1.8x to 16.8x on drop tests, for every servo.
-  The powered parts of those logs were unaffected. All of the extra error came from the torque-off phases.
-- **Across two units, powered tracking carries over and back-driven motion doesn't.** The two units are an STS3215
-  7.4 V and a 12 V version from another lab, with the same 345:1 gearbox. Using the 7.4 V friction values and
-  refitting only the motor constants gave 0.5° powered error, against 0.4° for the 12 V unit's own fit.
-  Back-driven error was 24° against 5°. This is a single pair, and the two differ in motor winding as well as unit,
+  Almost all of the extra error came from the torque-off phases. Powered-phase error rose only slightly
+  (largest: 0.29° to 0.43°). This breakdown is an exploratory analysis.
+- **The pre-registered cross-unit test failed.** The two units are an STS3215 7.4 V and a 12 V version from another lab,
+  with the same 345:1 gearbox. Moving the 7.4 V entry to the 12 V unit left 2.5x (friction only, motor constants
+  refit) to 5x (as is) the error of the 12 V unit's own fit. A post-hoc split by phase shows where it fails.
+  With the 7.4 V friction and refit motor constants, powered error was 0.5° and back-driven error was 24°.
+  The 12 V unit's own fit, measured in-sample, gave 0.4° and 5°. This is a single pair, and the two differ in motor winding as well as unit,
   so read it as a hint.
 - **Two calibration logs were not enough to close that gap.** Starting from the 7.4 V entry and fitting on two
   12 V logs (one drop test, one other) left 1.7x (M6) to 2.2x (M1) the error of a full fit on that unit.
@@ -96,8 +98,8 @@ own simulator. Results at 5 ms and 1 ms timesteps differed by at most 0.02°.
 | Waveshare ST3025 | 135 | 1.35° | 1.11° | 4–32 | i1Cps/duck_mini_pro_headless |
 
 Errors are open-loop position MAE on held-out logs (random 80/20 split). M1 is Coulomb plus viscous friction,
-which is native in MuJoCo and PyBullet. M6 is BAM's extended model. \*The 19 held-out logs for this servo happened
-to be easy ones. Across all 97 logs, the M1 error is 1.19°.
+which is native in MuJoCo and PyBullet. M6 is BAM's extended model. \*This value comes from an under-converged fit,
+and the 19 held-out logs happened to be easy ones. For reference, the all-logs fit scores 1.19° in-sample.
 
 Each entry ([schema](db/schema.json)) records where it was measured, the range of conditions it covers,
 how much the error grew when each condition was held out, and the result of the cross-unit test where one exists.
@@ -122,8 +124,8 @@ pytest
 
 - Every log comes from a single-pendulum bench. Coupled multi-joint loads are not tested.
 - Each part was measured on one physical unit. The cross-unit test is a single pair, and it also crosses a voltage version.
-- Four split fits remain under-converged after refitting. Their effect on each conclusion is spelled out in the findings.
-  None of them changes a pass/fail verdict.
+- Four split fits remain under-converged after refitting. The findings spell out which way each one could push its
+  conclusion. Where a verdict depends on one of them, the same verdict holds for every other fit in that test.
 - The raw-log licenses are not stated by their sources. This repo publishes only fitted parameters and summaries,
   and `scripts/fetch.sh` downloads the logs from their original locations.
 
