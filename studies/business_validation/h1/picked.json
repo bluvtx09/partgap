@@ -1,0 +1,2872 @@
+[
+{
+"id": "cadene/so100_5_lego_test",
+"author": "cadene",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 55,
+"frames": 45588,
+"downloads": 302,
+"created": "2024-12-02T16:45:45.000Z"
+},
+{
+"id": "DUDU9527/so100_test7",
+"author": "DUDU9527",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 11117,
+"downloads": 70,
+"created": "2024-12-10T15:57:16.000Z"
+},
+{
+"id": "francescocrivelli/so100_test",
+"author": "francescocrivelli",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 56,
+"frames": 38831,
+"downloads": 262,
+"created": "2024-12-08T10:39:39.000Z"
+},
+{
+"id": "ZCM5115/so100_2Arm3cameras_movebox",
+"author": "ZCM5115",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 17383,
+"downloads": 73,
+"created": "2024-12-27T07:48:07.000Z"
+},
+{
+"id": "gmm0820/so100_test5",
+"author": "gmm0820",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 26120,
+"downloads": 70,
+"created": "2024-12-12T15:04:22.000Z"
+},
+{
+"id": "CatWithIcecream/eval_act_so100_test",
+"author": "CatWithIcecream",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 11941,
+"downloads": 44,
+"created": "2024-12-16T00:39:12.000Z"
+},
+{
+"id": "satvikahuja/so100_test2",
+"author": "satvikahuja",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 40,
+"frames": 35834,
+"downloads": 207,
+"created": "2024-12-20T06:31:29.000Z"
+},
+{
+"id": "Chojins/so100_test20",
+"author": "Chojins",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 14399,
+"downloads": 57,
+"created": "2024-12-22T02:42:19.000Z"
+},
+{
+"id": "pranavsaroha/so100_medicine_0605",
+"author": "pranavsaroha",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 90315,
+"downloads": 371,
+"created": "2025-06-06T07:11:14.000Z"
+},
+{
+"id": "liyitenga/so100_pick_taffy7",
+"author": "liyitenga",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 44,
+"frames": 26890,
+"downloads": 87,
+"created": "2025-01-20T09:37:30.000Z"
+},
+{
+"id": "Z1564827455/so100_test_dp",
+"author": "Z1564827455",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 3877,
+"downloads": 61,
+"created": "2024-12-28T16:31:03.000Z"
+},
+{
+"id": "maximilienroberti/so100_lego_red_box",
+"author": "maximilienroberti",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 150,
+"frames": 40711,
+"downloads": 208,
+"created": "2024-12-29T17:48:45.000Z"
+},
+{
+"id": "rabhishek100/so100_train_dataset",
+"author": "rabhishek100",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 51118,
+"downloads": 158,
+"created": "2024-12-30T12:55:01.000Z"
+},
+{
+"id": "1145wang/so100_test",
+"author": "1145wang",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 3102,
+"downloads": 44,
+"created": "2024-12-30T05:59:19.000Z"
+},
+{
+"id": "agvdndor/eval_act_so100_test_4",
+"author": "agvdndor",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 11510,
+"downloads": 56,
+"created": "2024-12-31T14:15:26.000Z"
+},
+{
+"id": "pandaRQ/so100_test",
+"author": "pandaRQ",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 26751,
+"downloads": 67,
+"created": "2025-01-02T00:34:45.000Z"
+},
+{
+"id": "jmrog/so100_sweet_pick",
+"author": "jmrog",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 32068,
+"downloads": 254,
+"created": "2025-01-06T22:20:38.000Z"
+},
+{
+"id": "Endeavour1324/eval_act_so100_test8",
+"author": "Endeavour1324",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 5601,
+"downloads": 74,
+"created": "2025-01-08T07:25:28.000Z"
+},
+{
+"id": "jlitch/so100multicam7",
+"author": "jlitch",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 30,
+"frames": 8585,
+"downloads": 234,
+"created": "2025-01-09T21:24:19.000Z"
+},
+{
+"id": "caiiii/so100_test_0109",
+"author": "caiiii",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 20327,
+"downloads": 163,
+"created": "2025-01-09T11:17:08.000Z"
+},
+{
+"id": "vladfatu/so100_ds",
+"author": "vladfatu",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 60,
+"frames": 71734,
+"downloads": 288,
+"created": "2025-01-09T22:29:21.000Z"
+},
+{
+"id": "HITHY/so100_peach4",
+"author": "HITHY",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 400,
+"frames": 98409,
+"downloads": 81,
+"created": "2025-02-17T03:26:00.000Z"
+},
+{
+"id": "chmadran/so100_dataset04",
+"author": "chmadran",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 18751,
+"downloads": 160,
+"created": "2025-01-15T14:29:35.000Z"
+},
+{
+"id": "rlllll666/eval_act_so100_test1",
+"author": "rlllll666",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 11843,
+"downloads": 35,
+"created": "2025-01-18T13:47:32.000Z"
+},
+{
+"id": "yuz1wan/so100_pickplace",
+"author": "yuz1wan",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 30,
+"frames": 9068,
+"downloads": 50,
+"created": "2025-01-19T15:10:11.000Z"
+},
+{
+"id": "fljjoin/so100_testcubo20",
+"author": "fljjoin",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 40,
+"frames": 118828,
+"downloads": 140,
+"created": "2025-02-03T17:35:26.000Z"
+},
+{
+"id": "dragon-95/so100_sorting_2",
+"author": "dragon-95",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 220,
+"frames": 169922,
+"downloads": 97,
+"created": "2025-02-05T10:38:30.000Z"
+},
+{
+"id": "Ityl/so100_recording2",
+"author": "Ityl",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 45,
+"frames": 13634,
+"downloads": 111,
+"created": "2025-01-30T10:44:34.000Z"
+},
+{
+"id": "Creative-Intelligence/eval_act_so100_test",
+"author": "Creative-Intelligence",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 11903,
+"downloads": 35,
+"created": "2025-01-24T04:17:12.000Z"
+},
+{
+"id": "DimiSch/so100_terra_50_2",
+"author": "DimiSch",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 34,
+"frames": 81062,
+"downloads": 53,
+"created": "2025-02-09T17:11:57.000Z"
+},
+{
+"id": "nbaron99/so100_pick_and_place2",
+"author": "nbaron99",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 29745,
+"downloads": 61,
+"created": "2025-01-27T21:24:54.000Z"
+},
+{
+"id": "kantine/so100_kapla_tower6",
+"author": "kantine",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 17917,
+"downloads": 62,
+"created": "2025-03-04T14:32:31.000Z"
+},
+{
+"id": "triton7777/so100_dataset_mix",
+"author": "triton7777",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 65,
+"frames": 66189,
+"downloads": 52,
+"created": "2025-02-19T21:11:19.000Z"
+},
+{
+"id": "ad330/so100_box_pickPlace",
+"author": "ad330",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 29950,
+"downloads": 131,
+"created": "2025-01-31T15:54:29.000Z"
+},
+{
+"id": "Beegbrain/so100_put_cube_cup",
+"author": "Beegbrain",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 10778,
+"downloads": 109,
+"created": "2025-02-04T15:23:48.000Z"
+},
+{
+"id": "maizi2023/so100_test",
+"author": "maizi2023",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 13551,
+"downloads": 53,
+"created": "2025-02-06T10:36:55.000Z"
+},
+{
+"id": "stevenbobo/so100_test_lego12",
+"author": "stevenbobo",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 3651,
+"downloads": 92,
+"created": "2025-02-08T02:32:41.000Z"
+},
+{
+"id": "lyhhan/so100_test",
+"author": "lyhhan",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 12,
+"frames": 9405,
+"downloads": 42,
+"created": "2025-02-08T11:55:08.000Z"
+},
+{
+"id": "ITWT/eval_act_so100_test30",
+"author": "ITWT",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 6601,
+"downloads": 91,
+"created": "2025-02-28T19:25:55.000Z"
+},
+{
+"id": "kaiyuwu010/so100_test_1",
+"author": "kaiyuwu010",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 9256,
+"downloads": 64,
+"created": "2025-02-09T12:47:35.000Z"
+},
+{
+"id": "DavidKINGSMAN/so100_test",
+"author": "DavidKINGSMAN",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 7702,
+"downloads": 59,
+"created": "2025-02-10T03:16:22.000Z"
+},
+{
+"id": "bdharva/so100_long_test",
+"author": "bdharva",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 14780,
+"downloads": 152,
+"created": "2025-02-12T17:13:16.000Z"
+},
+{
+"id": "therarelab/so100_pick_place_2",
+"author": "therarelab",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 60,
+"frames": 25014,
+"downloads": 201,
+"created": "2025-04-04T14:38:52.000Z"
+},
+{
+"id": "aallarakhia/eval_act_so100_test",
+"author": "aallarakhia",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 5965,
+"downloads": 28,
+"created": "2025-02-13T14:49:50.000Z"
+},
+{
+"id": "zaringleb/so100_cude_linear_and_2d_comb",
+"author": "zaringleb",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 100,
+"frames": 27116,
+"downloads": 54,
+"created": "2025-04-05T23:12:09.000Z"
+},
+{
+"id": "lincy-cherish/eval_act_so100_test",
+"author": "lincy-cherish",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 11810,
+"downloads": 110,
+"created": "2025-02-16T10:35:27.000Z"
+},
+{
+"id": "nuaajiaz/so100_test",
+"author": "nuaajiaz",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 6725,
+"downloads": 121,
+"created": "2025-02-17T11:44:38.000Z"
+},
+{
+"id": "shreyasgite/so100_base_env",
+"author": "shreyasgite",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 252,
+"frames": 98999,
+"downloads": 104,
+"created": "2025-02-19T05:21:33.000Z"
+},
+{
+"id": "Deason11/so100_test_pick_and_place_50",
+"author": "Deason11",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 51,
+"frames": 32631,
+"downloads": 50,
+"created": "2025-02-19T08:43:24.000Z"
+},
+{
+"id": "hegdearyandev/so100_eraser_cup_v1",
+"author": "hegdearyandev",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 60,
+"frames": 18145,
+"downloads": 198,
+"created": "2025-02-19T10:28:18.000Z"
+},
+{
+"id": "jbraumann/so100_1902",
+"author": "jbraumann",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 26170,
+"downloads": 171,
+"created": "2025-02-19T13:18:30.000Z"
+},
+{
+"id": "airthebear/so100_test2",
+"author": "airthebear",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 15,
+"frames": 8985,
+"downloads": 95,
+"created": "2025-02-19T23:55:31.000Z"
+},
+{
+"id": "gdut508/final_so100_test_tea2",
+"author": "gdut508",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 66,
+"frames": 31250,
+"downloads": 287,
+"created": "2025-04-03T07:30:40.000Z"
+},
+{
+"id": "pfung/so100_test_clothfold_2",
+"author": "pfung",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 30,
+"frames": 34334,
+"downloads": 73,
+"created": "2025-03-03T08:31:35.000Z"
+},
+{
+"id": "pengjunkun/so100_push_to_hole",
+"author": "pengjunkun",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 22446,
+"downloads": 332,
+"created": "2025-02-25T08:11:39.000Z"
+},
+{
+"id": "brice6/eval_act_so100_test",
+"author": "brice6",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 7457,
+"downloads": 53,
+"created": "2025-02-26T14:03:51.000Z"
+},
+{
+"id": "xhaka3456/so100_test_0326_1",
+"author": "xhaka3456",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 110,
+"frames": 63639,
+"downloads": 165,
+"created": "2025-03-26T07:09:04.000Z"
+},
+{
+"id": "siqiLi/so100_test8",
+"author": "siqiLi",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 55904,
+"downloads": 63,
+"created": "2025-03-26T13:38:47.000Z"
+},
+{
+"id": "hellkrusher/so100_test3",
+"author": "hellkrusher",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 30,
+"frames": 10830,
+"downloads": 47,
+"created": "2025-02-27T02:50:55.000Z"
+},
+{
+"id": "danielkr452/so100_red_black_01",
+"author": "danielkr452",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 15023,
+"downloads": 169,
+"created": "2025-02-28T01:43:20.000Z"
+},
+{
+"id": "Loki0929/so100_100",
+"author": "Loki0929",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 100,
+"frames": 38280,
+"downloads": 141,
+"created": "2025-02-27T09:43:41.000Z"
+},
+{
+"id": "speedyyoshi/so100_grasp_pink_block",
+"author": "speedyyoshi",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 43255,
+"downloads": 486,
+"created": "2025-02-27T14:48:04.000Z"
+},
+{
+"id": "Triple-ROCK/so100_test",
+"author": "Triple-ROCK",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 3702,
+"downloads": 253,
+"created": "2025-02-28T09:51:16.000Z"
+},
+{
+"id": "ShockleyWong/so100_test331",
+"author": "ShockleyWong",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 15,
+"frames": 8651,
+"downloads": 124,
+"created": "2025-03-03T06:52:10.000Z"
+},
+{
+"id": "DorayakiLin/so100_test_Lucas3",
+"author": "DorayakiLin",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 16624,
+"downloads": 42,
+"created": "2025-04-15T09:09:40.000Z"
+},
+{
+"id": "doujiangwang/so100_new_test_50_episode",
+"author": "doujiangwang",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 14950,
+"downloads": 195,
+"created": "2025-03-05T14:48:35.000Z"
+},
+{
+"id": "TzuShian/so100_250527",
+"author": "TzuShian",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 32038,
+"downloads": 314,
+"created": "2025-05-27T08:30:04.000Z"
+},
+{
+"id": "yunhezhui123/so100_test6",
+"author": "yunhezhui123",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 45,
+"frames": 26818,
+"downloads": 368,
+"created": "2025-03-14T09:52:21.000Z"
+},
+{
+"id": "linanbei/so100_test",
+"author": "linanbei",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 20839,
+"downloads": 203,
+"created": "2025-03-06T03:34:40.000Z"
+},
+{
+"id": "dnfnzl12/eval_so100_test",
+"author": "dnfnzl12",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8664,
+"downloads": 72,
+"created": "2025-03-06T04:19:24.000Z"
+},
+{
+"id": "liuhuanjim013/so100_th",
+"author": "liuhuanjim013",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 74,
+"frames": 37220,
+"downloads": 197,
+"created": "2025-03-07T14:17:42.000Z"
+},
+{
+"id": "hannb/eval_act_so100_test",
+"author": "hannb",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 4043,
+"downloads": 67,
+"created": "2025-03-06T13:24:52.000Z"
+},
+{
+"id": "DYH-trans/so100_bi_test2",
+"author": "DYH-trans",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 4948,
+"downloads": 51,
+"created": "2025-03-07T05:59:45.000Z"
+},
+{
+"id": "sihyun77/suho_so100",
+"author": "sihyun77",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 24955,
+"downloads": 195,
+"created": "2025-03-11T07:18:08.000Z"
+},
+{
+"id": "pangdingjack/so100_test_new10",
+"author": "pangdingjack",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 11,
+"frames": 3907,
+"downloads": 89,
+"created": "2025-03-07T14:23:38.000Z"
+},
+{
+"id": "mchen02/so100_test3",
+"author": "mchen02",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 141,
+"frames": 108798,
+"downloads": 208,
+"created": "2025-03-08T07:35:38.000Z"
+},
+{
+"id": "luke250305/so100_test_250308.2",
+"author": "luke250305",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 15,
+"frames": 8908,
+"downloads": 69,
+"created": "2025-03-08T10:04:09.000Z"
+},
+{
+"id": "lime66/so100_test",
+"author": "lime66",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 5990,
+"downloads": 146,
+"created": "2025-03-09T10:09:59.000Z"
+},
+{
+"id": "sshh11/so100_orange_50ep_2cam_2",
+"author": "sshh11",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 14965,
+"downloads": 214,
+"created": "2025-05-10T13:02:37.000Z"
+},
+{
+"id": "andy309/so100_test_0310_1608",
+"author": "andy309",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 23198,
+"downloads": 34,
+"created": "2025-03-10T08:27:39.000Z"
+},
+{
+"id": "pdd46465/so100_test_xia",
+"author": "pdd46465",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 16,
+"frames": 15052,
+"downloads": 35,
+"created": "2025-03-11T03:29:01.000Z"
+},
+{
+"id": "youliangtan/so100_strawberry_grape",
+"author": "youliangtan",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 19038,
+"downloads": 367,
+"created": "2025-03-11T05:53:47.000Z"
+},
+{
+"id": "joaoocruz00/so100_makeitD1",
+"author": "joaoocruz00",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 44698,
+"downloads": 202,
+"created": "2025-03-13T15:02:08.000Z"
+},
+{
+"id": "igaewa/so100_test_v3",
+"author": "igaewa",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 22400,
+"downloads": 44,
+"created": "2025-03-15T04:15:44.000Z"
+},
+{
+"id": "Winster/so100_cube",
+"author": "Winster",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 29900,
+"downloads": 224,
+"created": "2025-03-14T10:05:08.000Z"
+},
+{
+"id": "Odog16/eval_act_so100_test_5",
+"author": "Odog16",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 66916,
+"downloads": 55,
+"created": "2025-03-17T00:36:52.000Z"
+},
+{
+"id": "amxxd/eval_act_so100_test1",
+"author": "amxxd",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 7139,
+"downloads": 42,
+"created": "2025-03-15T11:32:27.000Z"
+},
+{
+"id": "pingev/so100_test_2025-03-15-2",
+"author": "pingev",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 11873,
+"downloads": 315,
+"created": "2025-03-15T15:15:10.000Z"
+},
+{
+"id": "dawidbogusz0/so100_test",
+"author": "dawidbogusz0",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 15,
+"frames": 13500,
+"downloads": 24,
+"created": "2025-03-15T16:24:51.000Z"
+},
+{
+"id": "QiGuaiOu/so100_test_v2",
+"author": "QiGuaiOu",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 26,
+"frames": 11418,
+"downloads": 253,
+"created": "2025-03-16T15:51:33.000Z"
+},
+{
+"id": "HarrisonLee24/eval_act_so100_test",
+"author": "HarrisonLee24",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8524,
+"downloads": 77,
+"created": "2025-03-17T13:24:33.000Z"
+},
+{
+"id": "kumarhans/so100_push_box_real1",
+"author": "kumarhans",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 20095,
+"downloads": 203,
+"created": "2025-04-27T19:15:30.000Z"
+},
+{
+"id": "laplace12/so100_test",
+"author": "laplace12",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 765,
+"downloads": 30,
+"created": "2025-03-18T08:45:52.000Z"
+},
+{
+"id": "Congying1112/eval_act_so100_simplepick_with_2_cameras_from_top",
+"author": "Congying1112",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8944,
+"downloads": 27,
+"created": "2025-03-26T11:22:51.000Z"
+},
+{
+"id": "opan08/eval_so100_test_4",
+"author": "opan08",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8770,
+"downloads": 32,
+"created": "2025-03-20T04:47:33.000Z"
+},
+{
+"id": "HYAIYN/so100_get_orange_10epi",
+"author": "HYAIYN",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 6885,
+"downloads": 88,
+"created": "2025-03-20T13:06:13.000Z"
+},
+{
+"id": "BiancoBeni/so100_test4",
+"author": "BiancoBeni",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 90,
+"frames": 44177,
+"downloads": 166,
+"created": "2025-03-21T15:16:06.000Z"
+},
+{
+"id": "wcode/so100_put_pen_50",
+"author": "wcode",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 37449,
+"downloads": 206,
+"created": "2025-03-22T08:49:55.000Z"
+},
+{
+"id": "jchun/so100_pickplace_small_20250323_120056",
+"author": "jchun",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 101,
+"frames": 86219,
+"downloads": 81,
+"created": "2025-03-23T20:23:18.000Z"
+},
+{
+"id": "baladhurgesh97/so100_test",
+"author": "baladhurgesh97",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 20652,
+"downloads": 79,
+"created": "2025-03-23T04:53:04.000Z"
+},
+{
+"id": "AK51/so100_test3",
+"author": "AK51",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 12450,
+"downloads": 35,
+"created": "2025-03-23T05:36:45.000Z"
+},
+{
+"id": "bnarin/so100_tic_tac_toe_we_do_it_live",
+"author": "bnarin",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 29756,
+"downloads": 242,
+"created": "2025-03-23T07:32:50.000Z"
+},
+{
+"id": "dc2ac/so100-t5",
+"author": "dc2ac",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 10487,
+"downloads": 133,
+"created": "2025-03-23T10:46:38.000Z"
+},
+{
+"id": "wangggg187/so100_test02",
+"author": "wangggg187",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 22878,
+"downloads": 25,
+"created": "2025-03-24T08:24:48.000Z"
+},
+{
+"id": "frk2/so100largediffcam",
+"author": "frk2",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 22398,
+"downloads": 45,
+"created": "2025-03-26T05:13:49.000Z"
+},
+{
+"id": "badwolf256/so100_twin_cam_duck_v2",
+"author": "badwolf256",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 17,
+"frames": 15215,
+"downloads": 113,
+"created": "2025-03-28T03:48:46.000Z"
+},
+{
+"id": "00ri/so100_battery",
+"author": "00ri",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 24263,
+"downloads": 328,
+"created": "2025-03-26T00:53:26.000Z"
+},
+{
+"id": "FsqZ/so100_1",
+"author": "FsqZ",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 40,
+"frames": 19197,
+"downloads": 261,
+"created": "2025-03-26T07:40:32.000Z"
+},
+{
+"id": "Zak-Y/so100_grap_dataset",
+"author": "Zak-Y",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 5810,
+"downloads": 104,
+"created": "2025-03-26T07:48:35.000Z"
+},
+{
+"id": "ZGGZZG/so100_drop1",
+"author": "ZGGZZG",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 16383,
+"downloads": 121,
+"created": "2025-03-27T08:14:36.000Z"
+},
+{
+"id": "wu12581/so100_test_dtp",
+"author": "wu12581",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 10740,
+"downloads": 187,
+"created": "2025-03-26T10:38:30.000Z"
+},
+{
+"id": "abhisb/so100_51_ep",
+"author": "abhisb",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 51,
+"frames": 46882,
+"downloads": 108,
+"created": "2025-04-01T13:22:59.000Z"
+},
+{
+"id": "lucasngoo/so100_strawberry_grape",
+"author": "lucasngoo",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 11959,
+"downloads": 89,
+"created": "2025-03-26T14:39:18.000Z"
+},
+{
+"id": "Yotofu/so100_sweeper_shoes",
+"author": "Yotofu",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 774,
+"frames": 2145169,
+"downloads": 971,
+"created": "2025-03-27T13:22:11.000Z"
+},
+{
+"id": "hiahia121/eval_so100_test_3_20",
+"author": "hiahia121",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 7474,
+"downloads": 107,
+"created": "2025-03-27T21:04:57.000Z"
+},
+{
+"id": "ganker5/eval_act_so100_push_20250328",
+"author": "ganker5",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8823,
+"downloads": 87,
+"created": "2025-03-28T10:08:19.000Z"
+},
+{
+"id": "lizi178119985/so100_jia",
+"author": "lizi178119985",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 26151,
+"downloads": 43,
+"created": "2025-03-30T03:57:09.000Z"
+},
+{
+"id": "sixpigs1/so100_stack_cube_error",
+"author": "sixpigs1",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 6222,
+"downloads": 109,
+"created": "2025-04-11T08:23:36.000Z"
+},
+{
+"id": "andrewcole712/so100_tape_bin_place",
+"author": "andrewcole712",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 28437,
+"downloads": 113,
+"created": "2025-03-30T18:29:04.000Z"
+},
+{
+"id": "ZHUZHUXIADDD/so100_test113",
+"author": "ZHUZHUXIADDD",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 15734,
+"downloads": 191,
+"created": "2025-03-31T11:04:41.000Z"
+},
+{
+"id": "Gano007/so100_testfull",
+"author": "Gano007",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 44850,
+"downloads": 127,
+"created": "2025-03-31T15:57:44.000Z"
+},
+{
+"id": "douzi999/so100_test_25",
+"author": "douzi999",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 19701,
+"downloads": 104,
+"created": "2025-04-03T06:44:29.000Z"
+},
+{
+"id": "fanfengping/so100_202504020_20_01",
+"author": "fanfengping",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 8543,
+"downloads": 27,
+"created": "2025-04-02T08:56:22.000Z"
+},
+{
+"id": "XXRRSSRR/so100_v3_num_episodes_50",
+"author": "XXRRSSRR",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 28911,
+"downloads": 575,
+"created": "2025-04-02T11:47:39.000Z"
+},
+{
+"id": "Aaron757/so100_test7",
+"author": "Aaron757",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 13275,
+"downloads": 87,
+"created": "2025-04-02T13:13:05.000Z"
+},
+{
+"id": "labaruss/so100_cube_to_cup",
+"author": "labaruss",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 22100,
+"downloads": 57,
+"created": "2025-04-03T13:32:50.000Z"
+},
+{
+"id": "easonjcc/so100_test-1",
+"author": "easonjcc",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 22197,
+"downloads": 136,
+"created": "2025-04-03T13:54:54.000Z"
+},
+{
+"id": "paszea/so100_lego_2cam",
+"author": "paszea",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 88148,
+"downloads": 60,
+"created": "2025-04-14T01:21:09.000Z"
+},
+{
+"id": "Qiushuang/so100_test",
+"author": "Qiushuang",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 9398,
+"downloads": 290,
+"created": "2025-04-04T07:30:31.000Z"
+},
+{
+"id": "RasmusP/so100_Orange2Green",
+"author": "RasmusP",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 29712,
+"downloads": 257,
+"created": "2025-04-13T09:36:45.000Z"
+},
+{
+"id": "356c/so100_rope_reposition_1",
+"author": "356c",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 60,
+"frames": 48800,
+"downloads": 138,
+"created": "2025-04-08T19:33:58.000Z"
+},
+{
+"id": "Louisnbt/so100_test9",
+"author": "Louisnbt",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 22186,
+"downloads": 107,
+"created": "2025-04-05T12:51:42.000Z"
+},
+{
+"id": "LemonadeDai/so100_coca",
+"author": "LemonadeDai",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 14900,
+"downloads": 125,
+"created": "2025-04-07T09:11:59.000Z"
+},
+{
+"id": "T1g3rGE/so100_pickplace_small_20250407_171912",
+"author": "T1g3rGE",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 17930,
+"downloads": 127,
+"created": "2025-04-07T09:30:22.000Z"
+},
+{
+"id": "mandigaaravind/so100_test1",
+"author": "mandigaaravind",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 31551,
+"downloads": 28,
+"created": "2025-04-07T23:35:09.000Z"
+},
+{
+"id": "Mwuqiu/so100_0408",
+"author": "Mwuqiu",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 10109,
+"downloads": 166,
+"created": "2025-04-08T09:07:37.000Z"
+},
+{
+"id": "aimihat/so100_tape",
+"author": "aimihat",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 13440,
+"downloads": 136,
+"created": "2025-04-08T14:06:03.000Z"
+},
+{
+"id": "lirislab/guess_who_so100",
+"author": "lirislab",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 96,
+"frames": 23114,
+"downloads": 89,
+"created": "2025-04-12T16:06:40.000Z"
+},
+{
+"id": "JackLiuX/so100_test_candy_new",
+"author": "JackLiuX",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 91,
+"frames": 53139,
+"downloads": 204,
+"created": "2025-04-11T10:26:15.000Z"
+},
+{
+"id": "RASPIAUDIO/so100_test7",
+"author": "RASPIAUDIO",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 8749,
+"downloads": 155,
+"created": "2025-04-09T16:35:03.000Z"
+},
+{
+"id": "weiye11/so100_410_zwy",
+"author": "weiye11",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 101,
+"frames": 36046,
+"downloads": 275,
+"created": "2025-04-10T05:50:12.000Z"
+},
+{
+"id": "VoicAndrei/so100_green_blocks",
+"author": "VoicAndrei",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 36,
+"frames": 45518,
+"downloads": 310,
+"created": "2025-04-23T14:15:26.000Z"
+},
+{
+"id": "danaaubakirova/svla_so100_task4_v3_multiple",
+"author": "danaaubakirova",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 48562,
+"downloads": 183,
+"created": "2025-05-12T15:34:13.000Z"
+},
+{
+"id": "nguyen-v/so100_bimanual_grab_lemon_put_in_box2",
+"author": "nguyen-v",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 23296,
+"downloads": 140,
+"created": "2025-04-13T00:37:20.000Z"
+},
+{
+"id": "Jiafei1224/so100_pa222per",
+"author": "Jiafei1224",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 13442,
+"downloads": 165,
+"created": "2025-04-13T23:39:06.000Z"
+},
+{
+"id": "shrutic12/eval_act_so100_test_cube",
+"author": "shrutic12",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6191,
+"downloads": 35,
+"created": "2025-04-11T11:41:32.000Z"
+},
+{
+"id": "wannrrr/so100_grab_test",
+"author": "wannrrr",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 14396,
+"downloads": 238,
+"created": "2025-04-11T13:26:29.000Z"
+},
+{
+"id": "Thorns07/so100_test_diffusion_grasp",
+"author": "Thorns07",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 11353,
+"downloads": 108,
+"created": "2025-04-11T15:10:46.000Z"
+},
+{
+"id": "m1b/so100_bluelego",
+"author": "m1b",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 44,
+"frames": 14900,
+"downloads": 185,
+"created": "2025-04-12T11:14:15.000Z"
+},
+{
+"id": "davidgoss/eval_act_so100_test",
+"author": "davidgoss",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 8640,
+"downloads": 24,
+"created": "2025-04-12T16:17:52.000Z"
+},
+{
+"id": "jchandru08/so100_press_red_button",
+"author": "jchandru08",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 16,
+"frames": 9458,
+"downloads": 133,
+"created": "2025-04-13T00:05:19.000Z"
+},
+{
+"id": "Jiangeng/so100_413",
+"author": "Jiangeng",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 17851,
+"downloads": 273,
+"created": "2025-04-13T01:08:23.000Z"
+},
+{
+"id": "tkc79/so100_lego_box_1",
+"author": "tkc79",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 104,
+"frames": 46689,
+"downloads": 60,
+"created": "2025-04-13T05:46:44.000Z"
+},
+{
+"id": "Cidoyi/so100_all_notes_1",
+"author": "Cidoyi",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 11553,
+"downloads": 154,
+"created": "2025-04-13T09:44:42.000Z"
+},
+{
+"id": "roboticshack/team2-guess_who_so100",
+"author": "roboticshack",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 96,
+"frames": 23114,
+"downloads": 180,
+"created": "2025-04-13T13:04:04.000Z"
+},
+{
+"id": "dongseon/so100_04261",
+"author": "dongseon",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 11184,
+"downloads": 85,
+"created": "2025-04-26T15:23:58.000Z"
+},
+{
+"id": "Mohamedal/so100_test_peach_ddata",
+"author": "Mohamedal",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 51,
+"frames": 21105,
+"downloads": 133,
+"created": "2025-05-21T14:10:13.000Z"
+},
+{
+"id": "carlosdp/eval_act_so100_test",
+"author": "carlosdp",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8778,
+"downloads": 41,
+"created": "2025-04-14T18:04:21.000Z"
+},
+{
+"id": "baptiste-04/so100_test_v6",
+"author": "baptiste-04",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 23918,
+"downloads": 151,
+"created": "2025-04-14T21:08:59.000Z"
+},
+{
+"id": "Setchii/so100_grab_ball",
+"author": "Setchii",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 13031,
+"downloads": 243,
+"created": "2025-04-15T11:11:22.000Z"
+},
+{
+"id": "MossProphet/so100_folding_4.6.25",
+"author": "MossProphet",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 53,
+"frames": 21714,
+"downloads": 37,
+"created": "2025-06-04T14:56:09.000Z"
+},
+{
+"id": "pgoffin/so100_ball",
+"author": "pgoffin",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 35217,
+"downloads": 41,
+"created": "2025-04-16T14:17:50.000Z"
+},
+{
+"id": "sergiov2000/so100_lego_and_ball_40_ball",
+"author": "sergiov2000",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 35880,
+"downloads": 194,
+"created": "2025-06-13T14:15:45.000Z"
+},
+{
+"id": "shylee/so100_2cam",
+"author": "shylee",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 14694,
+"downloads": 175,
+"created": "2025-07-25T15:27:56.000Z"
+},
+{
+"id": "xzzzzaaa/so100_test1",
+"author": "xzzzzaaa",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 40,
+"frames": 9735,
+"downloads": 148,
+"created": "2025-04-18T12:37:42.000Z"
+},
+{
+"id": "apayan/so100_key3_local",
+"author": "apayan",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 67,
+"frames": 55663,
+"downloads": 238,
+"created": "2025-04-27T20:32:44.000Z"
+},
+{
+"id": "tfoldi/so100_glass_4",
+"author": "tfoldi",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 13312,
+"downloads": 91,
+"created": "2025-05-26T14:36:50.000Z"
+},
+{
+"id": "fil1021/so100_test_0419",
+"author": "fil1021",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 14940,
+"downloads": 103,
+"created": "2025-04-19T01:35:29.000Z"
+},
+{
+"id": "ahork/so100_test_2",
+"author": "ahork",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 28697,
+"downloads": 34,
+"created": "2025-04-19T09:45:32.000Z"
+},
+{
+"id": "gxy1111/so100_pen",
+"author": "gxy1111",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 73154,
+"downloads": 51,
+"created": "2025-06-01T09:01:21.000Z"
+},
+{
+"id": "hoon-shin/so100_basketball",
+"author": "hoon-shin",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 18659,
+"downloads": 218,
+"created": "2025-04-20T00:47:42.000Z"
+},
+{
+"id": "joooonhocho/so100_doll_in_bowl_2",
+"author": "joooonhocho",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 29900,
+"downloads": 197,
+"created": "2025-04-20T07:04:54.000Z"
+},
+{
+"id": "romanovvv1987/so100_test_act3",
+"author": "romanovvv1987",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 24723,
+"downloads": 42,
+"created": "2025-04-30T11:23:13.000Z"
+},
+{
+"id": "UN-kk/so100_test",
+"author": "UN-kk",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 22590,
+"downloads": 275,
+"created": "2025-04-20T12:41:35.000Z"
+},
+{
+"id": "ycdamn1988/so100_0420_3",
+"author": "ycdamn1988",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 200,
+"frames": 62293,
+"downloads": 507,
+"created": "2025-04-20T18:21:21.000Z"
+},
+{
+"id": "yadunund/so100_move_black_knight",
+"author": "yadunund",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 4454,
+"downloads": 222,
+"created": "2025-04-21T05:59:11.000Z"
+},
+{
+"id": "zhaoraning/so100_thefirs",
+"author": "zhaoraning",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 15437,
+"downloads": 52,
+"created": "2025-05-12T14:36:42.000Z"
+},
+{
+"id": "WalonWal/so100_test",
+"author": "WalonWal",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 4182,
+"downloads": 111,
+"created": "2025-04-22T13:09:19.000Z"
+},
+{
+"id": "kivod/so100_cam2",
+"author": "kivod",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 52,
+"frames": 24655,
+"downloads": 269,
+"created": "2025-05-14T07:22:16.000Z"
+},
+{
+"id": "slowturtle99/so100_pick_place_blocks",
+"author": "slowturtle99",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 35084,
+"downloads": 333,
+"created": "2025-06-01T18:57:42.000Z"
+},
+{
+"id": "SahilChande/so100_pick_carrot",
+"author": "SahilChande",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 91,
+"frames": 39357,
+"downloads": 334,
+"created": "2025-04-23T13:11:55.000Z"
+},
+{
+"id": "JimmyPeng02/so100_test_6",
+"author": "JimmyPeng02",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 35860,
+"downloads": 171,
+"created": "2025-04-24T13:48:47.000Z"
+},
+{
+"id": "ryanpennings/so100_pegcrate_c2",
+"author": "ryanpennings",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 16422,
+"downloads": 180,
+"created": "2025-04-25T07:34:05.000Z"
+},
+{
+"id": "maitereo/so100_bag_placement_20250426",
+"author": "maitereo",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 59,
+"frames": 48333,
+"downloads": 396,
+"created": "2025-04-25T17:52:54.000Z"
+},
+{
+"id": "ps5387/eval_act_so100_test20",
+"author": "ps5387",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 11580,
+"downloads": 32,
+"created": "2025-04-25T21:04:14.000Z"
+},
+{
+"id": "arulloomba/so100_test_20250425_153231",
+"author": "arulloomba",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 7474,
+"downloads": 71,
+"created": "2025-04-25T22:41:04.000Z"
+},
+{
+"id": "love3165303/so100_pick_ball_colors3",
+"author": "love3165303",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 109,
+"frames": 32058,
+"downloads": 238,
+"created": "2025-06-13T06:14:59.000Z"
+},
+{
+"id": "xnny/so100_test_0426c",
+"author": "xnny",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 53,
+"frames": 29955,
+"downloads": 285,
+"created": "2025-04-26T10:54:22.000Z"
+},
+{
+"id": "1909398036ljy/so100_test5",
+"author": "1909398036ljy",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 16579,
+"downloads": 278,
+"created": "2025-04-26T08:14:19.000Z"
+},
+{
+"id": "julyfun/so100_pick_and_place_v4_50",
+"author": "julyfun",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 13638,
+"downloads": 237,
+"created": "2025-04-26T20:57:34.000Z"
+},
+{
+"id": "Taka-Hashimoto/so100_touch_dataset",
+"author": "Taka-Hashimoto",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 5474,
+"downloads": 51,
+"created": "2025-04-27T05:25:04.000Z"
+},
+{
+"id": "BranoSandy/so100_test_cap_20",
+"author": "BranoSandy",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 17737,
+"downloads": 127,
+"created": "2025-05-09T14:10:12.000Z"
+},
+{
+"id": "luriss/so100_pick_and_place_box_task_0430_1",
+"author": "luriss",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 19901,
+"downloads": 278,
+"created": "2025-04-29T16:11:20.000Z"
+},
+{
+"id": "Hennadiy/so100_50",
+"author": "Hennadiy",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 29895,
+"downloads": 284,
+"created": "2025-04-27T18:21:31.000Z"
+},
+{
+"id": "maux/so100_test",
+"author": "maux",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 28720,
+"downloads": 219,
+"created": "2025-04-27T19:57:27.000Z"
+},
+{
+"id": "StarLionJiang/so100_yolo_bottle2",
+"author": "StarLionJiang",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 11207,
+"downloads": 102,
+"created": "2025-04-28T02:34:15.000Z"
+},
+{
+"id": "masato-ka/so100_nlact_block_instruct_v3",
+"author": "masato-ka",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 70,
+"frames": 44058,
+"downloads": 112,
+"created": "2025-05-23T00:49:55.000Z"
+},
+{
+"id": "juni3227/so100_test03",
+"author": "juni3227",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 74,
+"frames": 60461,
+"downloads": 323,
+"created": "2025-04-29T09:36:52.000Z"
+},
+{
+"id": "allenchienxxx/so100_block_mug",
+"author": "allenchienxxx",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8938,
+"downloads": 424,
+"created": "2025-04-30T20:28:27.000Z"
+},
+{
+"id": "asafxrev/so100_jenga_box_may28_2cam_bg",
+"author": "asafxrev",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 14,
+"frames": 12521,
+"downloads": 117,
+"created": "2025-05-29T01:35:51.000Z"
+},
+{
+"id": "stevenoh2003/so100_usb_1",
+"author": "stevenoh2003",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 15,
+"frames": 6112,
+"downloads": 133,
+"created": "2025-05-03T13:30:29.000Z"
+},
+{
+"id": "mhered/eval_act_so100_test",
+"author": "mhered",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 5021,
+"downloads": 56,
+"created": "2025-05-04T09:44:43.000Z"
+},
+{
+"id": "pmohan6/so100_test_1",
+"author": "pmohan6",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8974,
+"downloads": 46,
+"created": "2025-05-04T23:09:54.000Z"
+},
+{
+"id": "charleyong/so100_y_cube",
+"author": "charleyong",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 29735,
+"downloads": 89,
+"created": "2025-05-05T02:08:36.000Z"
+},
+{
+"id": "produc-xuan/so100_guess_who_base",
+"author": "produc-xuan",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 95,
+"frames": 51045,
+"downloads": 184,
+"created": "2025-05-05T10:32:04.000Z"
+},
+{
+"id": "simiken1234/so100_wave",
+"author": "simiken1234",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 2980,
+"downloads": 84,
+"created": "2025-05-05T15:33:18.000Z"
+},
+{
+"id": "hrhraj/so100_dice_yellow",
+"author": "hrhraj",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 14925,
+"downloads": 173,
+"created": "2025-05-05T21:54:18.000Z"
+},
+{
+"id": "Maxvondemmustermann/so100_cup",
+"author": "Maxvondemmustermann",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 18750,
+"downloads": 211,
+"created": "2025-05-06T07:46:12.000Z"
+},
+{
+"id": "mtitg/so100_set_screw",
+"author": "mtitg",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 52,
+"frames": 42264,
+"downloads": 70,
+"created": "2025-06-03T00:09:08.000Z"
+},
+{
+"id": "DuckZH/so100_test_4",
+"author": "DuckZH",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 10,
+"frames": 13460,
+"downloads": 76,
+"created": "2025-05-07T09:35:57.000Z"
+},
+{
+"id": "kevin-nd/so100_test_2",
+"author": "kevin-nd",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 17902,
+"downloads": 146,
+"created": "2025-05-07T09:56:40.000Z"
+},
+{
+"id": "cjlqwe/so100_71_100",
+"author": "cjlqwe",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 26438,
+"downloads": 150,
+"created": "2025-05-16T12:23:16.000Z"
+},
+{
+"id": "woohyunwoo/so100_put_somth_to_cup",
+"author": "woohyunwoo",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 72,
+"frames": 32751,
+"downloads": 40,
+"created": "2025-05-09T01:29:49.000Z"
+},
+{
+"id": "jackyckhsu98/so100_test52",
+"author": "jackyckhsu98",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 50,
+"frames": 12718,
+"downloads": 105,
+"created": "2025-05-26T05:54:19.000Z"
+},
+{
+"id": "mathieutk/so100_gobe",
+"author": "mathieutk",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 49,
+"frames": 9515,
+"downloads": 40,
+"created": "2025-05-15T14:11:37.000Z"
+},
+{
+"id": "aaronsu11/so100_instrument",
+"author": "aaronsu11",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 85,
+"frames": 20906,
+"downloads": 133,
+"created": "2025-06-16T07:19:12.000Z"
+},
+{
+"id": "howld/so100_grab_lego",
+"author": "howld",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 16003,
+"downloads": 224,
+"created": "2025-05-09T09:32:44.000Z"
+},
+{
+"id": "kyomangold/so100_ttt_A1_v2",
+"author": "kyomangold",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 50800,
+"downloads": 153,
+"created": "2025-05-10T14:27:49.000Z"
+},
+{
+"id": "jiuyal2/so100_marker",
+"author": "jiuyal2",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 41084,
+"downloads": 423,
+"created": "2025-05-20T23:02:02.000Z"
+},
+{
+"id": "shixiaochen/eval_so100_test_2",
+"author": "shixiaochen",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 7202,
+"downloads": 49,
+"created": "2025-05-11T12:34:37.000Z"
+},
+{
+"id": "angle2001/so100_test_0512_4",
+"author": "angle2001",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 12328,
+"downloads": 27,
+"created": "2025-05-13T07:08:32.000Z"
+},
+{
+"id": "acyanbird/so100_red_record100",
+"author": "acyanbird",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 101,
+"frames": 20593,
+"downloads": 285,
+"created": "2025-05-16T13:29:41.000Z"
+},
+{
+"id": "lerobot/svla_so100_pickplace",
+"author": "lerobot",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 19631,
+"downloads": 7541,
+"created": "2025-05-12T13:37:46.000Z"
+},
+{
+"id": "kkurzweil/so100_wrist_01",
+"author": "kkurzweil",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 23,
+"frames": 38667,
+"downloads": 51,
+"created": "2025-05-13T03:32:20.000Z"
+},
+{
+"id": "rs545837/eval_act_so100_test2",
+"author": "rs545837",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6493,
+"downloads": 37,
+"created": "2025-05-16T20:30:54.000Z"
+},
+{
+"id": "YasmineMakni/eval_act_so100_mvt_ball_2",
+"author": "YasmineMakni",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6590,
+"downloads": 25,
+"created": "2025-05-14T08:21:14.000Z"
+},
+{
+"id": "BENVBAI/so100_eraser2bowl_gd2",
+"author": "BENVBAI",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 35080,
+"downloads": 46,
+"created": "2025-05-19T08:29:42.000Z"
+},
+{
+"id": "Yanis7777/so100_duck",
+"author": "Yanis7777",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 15877,
+"downloads": 105,
+"created": "2025-05-15T11:36:49.000Z"
+},
+{
+"id": "yyyyyy0604/so100_data",
+"author": "yyyyyy0604",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 60,
+"frames": 35742,
+"downloads": 202,
+"created": "2025-05-16T02:20:32.000Z"
+},
+{
+"id": "campa-rabb/so100_50ep",
+"author": "campa-rabb",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 35,
+"frames": 62512,
+"downloads": 334,
+"created": "2025-05-16T13:44:08.000Z"
+},
+{
+"id": "chocolat-nya/so100_test7",
+"author": "chocolat-nya",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 119107,
+"downloads": 143,
+"created": "2025-05-18T00:43:04.000Z"
+},
+{
+"id": "vicwu666/so100_test2",
+"author": "vicwu666",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 7460,
+"downloads": 100,
+"created": "2025-05-18T13:29:44.000Z"
+},
+{
+"id": "Trelis/eval_act_so100_test3",
+"author": "Trelis",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6529,
+"downloads": 38,
+"created": "2025-05-19T04:34:58.000Z"
+},
+{
+"id": "joonsu0109/eval_so100_pickup_green_lego_act",
+"author": "joonsu0109",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 4474,
+"downloads": 39,
+"created": "2025-05-20T06:55:09.000Z"
+},
+{
+"id": "SharkDan/so100_test_f3c",
+"author": "SharkDan",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 15,
+"frames": 10677,
+"downloads": 137,
+"created": "2025-05-20T12:00:59.000Z"
+},
+{
+"id": "imsyed00/so100_banana_pickplace_1",
+"author": "imsyed00",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 31,
+"frames": 13792,
+"downloads": 287,
+"created": "2025-05-22T23:18:34.000Z"
+},
+{
+"id": "sumedhs7/so100_single_task",
+"author": "sumedhs7",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 20,
+"frames": 11973,
+"downloads": 31,
+"created": "2025-05-26T00:07:24.000Z"
+},
+{
+"id": "lqjTuT/eval_act_so100_test3",
+"author": "lqjTuT",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 7912,
+"downloads": 23,
+"created": "2025-05-26T10:10:52.000Z"
+},
+{
+"id": "jiroh2000/so100_test_003",
+"author": "jiroh2000",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 18,
+"frames": 13410,
+"downloads": 109,
+"created": "2025-05-27T10:00:28.000Z"
+},
+{
+"id": "burgalon/so100_test_camera_top",
+"author": "burgalon",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 16979,
+"downloads": 155,
+"created": "2025-05-28T14:41:53.000Z"
+},
+{
+"id": "samsitol/so100_peg01",
+"author": "samsitol",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 89,
+"frames": 79181,
+"downloads": 359,
+"created": "2025-06-16T23:40:20.000Z"
+},
+{
+"id": "BobBobbson/so100_test_FIRST_DATA",
+"author": "BobBobbson",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 31309,
+"downloads": 306,
+"created": "2025-05-29T16:36:59.000Z"
+},
+{
+"id": "Smeet/so100_dataset_final",
+"author": "Smeet",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 21984,
+"downloads": 136,
+"created": "2025-05-29T21:14:18.000Z"
+},
+{
+"id": "suoxd123/so100_test_0530_20",
+"author": "suoxd123",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 5852,
+"downloads": 81,
+"created": "2025-05-30T01:05:00.000Z"
+},
+{
+"id": "fjpaxkm/eval_act_so100_test",
+"author": "fjpaxkm",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6784,
+"downloads": 23,
+"created": "2025-05-30T01:16:02.000Z"
+},
+{
+"id": "DanqingZ/so100_filtered_pick_green_grey",
+"author": "DanqingZ",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 74,
+"frames": 44125,
+"downloads": 321,
+"created": "2025-05-31T08:03:48.000Z"
+},
+{
+"id": "liustar1989/so100_test8",
+"author": "liustar1989",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 3000,
+"downloads": 93,
+"created": "2025-05-30T10:47:59.000Z"
+},
+{
+"id": "Dangvi/so100_dataset",
+"author": "Dangvi",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 11178,
+"downloads": 99,
+"created": "2025-06-01T14:18:08.000Z"
+},
+{
+"id": "dulics/so100_strawberry_bear",
+"author": "dulics",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 40,
+"frames": 23885,
+"downloads": 322,
+"created": "2025-06-02T18:07:36.000Z"
+},
+{
+"id": "hatch-sc/so100_test_v6",
+"author": "hatch-sc",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 26790,
+"downloads": 58,
+"created": "2025-06-03T06:09:46.000Z"
+},
+{
+"id": "seonixx/so100_test_v3",
+"author": "seonixx",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 100,
+"frames": 59693,
+"downloads": 391,
+"created": "2025-06-05T14:40:10.000Z"
+},
+{
+"id": "cezarsolo/so100_newdata",
+"author": "cezarsolo",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 29820,
+"downloads": 261,
+"created": "2025-06-06T15:03:31.000Z"
+},
+{
+"id": "akira-sasaki/so100_somlvla",
+"author": "akira-sasaki",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 8970,
+"downloads": 178,
+"created": "2025-06-04T06:39:51.000Z"
+},
+{
+"id": "deepinsand/so100_test2",
+"author": "deepinsand",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 15469,
+"downloads": 323,
+"created": "2025-06-04T15:29:00.000Z"
+},
+{
+"id": "jccj/so100_block_in_cup",
+"author": "jccj",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 21782,
+"downloads": 505,
+"created": "2025-06-04T16:27:55.000Z"
+},
+{
+"id": "youjiang97/so100_tt",
+"author": "youjiang97",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 17879,
+"downloads": 488,
+"created": "2025-06-05T07:35:30.000Z"
+},
+{
+"id": "zuozhuan/eval_so100_box_blanket_test_test",
+"author": "zuozhuan",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 8157,
+"downloads": 26,
+"created": "2025-06-05T15:10:19.000Z"
+},
+{
+"id": "devanshp10/so100_pick_place",
+"author": "devanshp10",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 15,
+"frames": 17886,
+"downloads": 54,
+"created": "2025-06-06T21:15:30.000Z"
+},
+{
+"id": "edgarkim/so100_test_edgar_block",
+"author": "edgarkim",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 44746,
+"downloads": 180,
+"created": "2025-06-10T01:00:29.000Z"
+},
+{
+"id": "tim19970907/so100_test_0616_2",
+"author": "tim19970907",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 16063,
+"downloads": 27,
+"created": "2025-06-16T08:44:20.000Z"
+},
+{
+"id": "DavidYeh0709/so100_david_0610_3",
+"author": "DavidYeh0709",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 7365,
+"downloads": 22,
+"created": "2025-06-10T02:19:58.000Z"
+},
+{
+"id": "lt-s/so100_train_move_six_blocks_tray_to_matching_dishes",
+"author": "lt-s",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 11829,
+"downloads": 144,
+"created": "2025-06-10T02:47:47.000Z"
+},
+{
+"id": "luckyrobots/so100_Dataset_250_V0.1",
+"author": "luckyrobots",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 250,
+"frames": 34723,
+"downloads": 81,
+"created": "2025-06-10T13:30:49.000Z"
+},
+{
+"id": "aaaRick/so100_test610first",
+"author": "aaaRick",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6211,
+"downloads": 77,
+"created": "2025-06-10T14:25:54.000Z"
+},
+{
+"id": "LeRobot-worldwide-hackathon/95-dr4r-hackathon_so100_pickandplace",
+"author": "LeRobot-worldwide-hackathon",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 164,
+"frames": 144792,
+"downloads": 221,
+"created": "2025-06-14T03:34:23.000Z"
+},
+{
+"id": "Ayush-Sharan-1/so100_ticTacToe_GP1",
+"author": "Ayush-Sharan-1",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 5950,
+"downloads": 86,
+"created": "2025-06-14T16:59:35.000Z"
+},
+{
+"id": "AMRUBARD/so100_make_coffeetest6",
+"author": "AMRUBARD",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 30,
+"frames": 39135,
+"downloads": 154,
+"created": "2025-06-15T07:15:21.000Z"
+},
+{
+"id": "tobdeu/so100_block_to_bin",
+"author": "tobdeu",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 15556,
+"downloads": 227,
+"created": "2025-06-20T10:36:25.000Z"
+},
+{
+"id": "yycgreentea/eval_act_so100_test",
+"author": "yycgreentea",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 4116,
+"downloads": 25,
+"created": "2025-06-25T03:10:04.000Z"
+},
+{
+"id": "lsrsir/so100_test_end_4",
+"author": "lsrsir",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 3827,
+"downloads": 78,
+"created": "2025-07-04T05:33:47.000Z"
+},
+{
+"id": "DAbraham/eval_act_so100_test5",
+"author": "DAbraham",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 6782,
+"downloads": 29,
+"created": "2025-07-07T19:08:40.000Z"
+},
+{
+"id": "desroziers/so100_5_lego_test",
+"author": "desroziers",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 55,
+"frames": 45588,
+"downloads": 26,
+"created": "2025-07-17T18:03:33.000Z"
+},
+{
+"id": "robot98101/so100_group20",
+"author": "robot98101",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 40,
+"frames": 11957,
+"downloads": 22,
+"created": "2025-07-23T12:28:43.000Z"
+},
+{
+"id": "Gong-666/eval_act_so100_test",
+"author": "Gong-666",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 22,
+"frames": 7870,
+"downloads": 104,
+"created": "2025-07-28T01:39:29.000Z"
+},
+{
+"id": "boyangs235/so100-Pick-Place_dataset_Put-square-in-bowl",
+"author": "boyangs235",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 105,
+"frames": 52093,
+"downloads": 483,
+"created": "2025-07-31T06:27:11.000Z"
+},
+{
+"id": "Snaijggid/so100_make",
+"author": "Snaijggid",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 10,
+"frames": 4147,
+"downloads": 24,
+"created": "2025-09-16T08:35:29.000Z"
+},
+{
+"id": "anzelesnik/svla_so100_pickplace",
+"author": "anzelesnik",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 19631,
+"downloads": 27,
+"created": "2025-11-21T12:09:51.000Z"
+},
+{
+"id": "GreenAvocado92/so100_pickplace_30",
+"author": "GreenAvocado92",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 30,
+"frames": 9068,
+"downloads": 28,
+"created": "2025-12-01T06:30:27.000Z"
+},
+{
+"id": "gaoxmai/so100_v1",
+"author": "gaoxmai",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 20,
+"frames": 7293,
+"downloads": 22,
+"created": "2025-12-02T05:05:12.000Z"
+},
+{
+"id": "sssabysslar/so100_nb10_dataset",
+"author": "sssabysslar",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 25,
+"frames": 12995,
+"downloads": 20,
+"created": "2025-12-26T13:33:23.000Z"
+},
+{
+"id": "FT-LLM-2026-RAMEN/svla_so100_pickplace",
+"author": "FT-LLM-2026-RAMEN",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 19631,
+"downloads": 36,
+"created": "2026-01-03T05:26:36.000Z"
+},
+{
+"id": "qualiaadmin/95-dr4r-hackathon_so100_pickandplace-tagged",
+"author": "qualiaadmin",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 164,
+"frames": 144792,
+"downloads": 55,
+"created": "2026-01-14T12:49:13.000Z"
+},
+{
+"id": "Ahi-Yu/so100_peach1",
+"author": "Ahi-Yu",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 25,
+"frames": 11004,
+"downloads": 120,
+"created": "2026-02-26T01:57:09.000Z"
+},
+{
+"id": "magnusk/so100_blocktest_50",
+"author": "magnusk",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 22306,
+"downloads": 235,
+"created": "2026-02-26T13:34:05.000Z"
+},
+{
+"id": "KhoaNguyen110/so100_picknplace_v2",
+"author": "KhoaNguyen110",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 201,
+"frames": 68906,
+"downloads": 32,
+"created": "2026-05-02T07:40:07.000Z"
+},
+{
+"id": "xzxg/svla_so100_pickplace",
+"author": "xzxg",
+"robot_type": "so100",
+"codebase": "v2.1",
+"episodes": 50,
+"frames": 19631,
+"downloads": 98,
+"created": "2026-09-05T17:00:53.000Z"
+},
+{
+"id": "Ofiroz91/eval_so_100_cube2bowl",
+"author": "Ofiroz91",
+"robot_type": "so100",
+"codebase": "v2.0",
+"episodes": 40,
+"frames": 46281,
+"downloads": 174,
+"created": "2024-12-02T21:04:15.000Z"
+}
+]
