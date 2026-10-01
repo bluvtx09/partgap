@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "partgap"
+version = "0.1.0"
+description = "Part-level simulation error library for hobby/research servo actuators: identified parameters, MuJoCo export, and how far each entry can be trusted."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+fit = ["cmaes", "scipy", "mujoco", "jsonschema", "matplotlib"]
+
+[project.scripts]
+partgap = "partgap.query:main"
+
+[tool.setuptools]
+packages = ["partgap"]

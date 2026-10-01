@@ -41,3 +41,15 @@ def test_command_filter_rate_limit_and_delay():
     g = CommandFilter({"command_delay": 0.010, "goal_rate_limit": None}, 0.005)
     seq = [g(x, 0.0) for x in [0.0, 1.0, 2.0, 3.0]]
     assert seq == [0.0, 0.0, 0.0, 1.0]              # two-step delay
+
+
+@pytest.mark.parametrize("part", ["feetech_sts3215_7v4", "dynamixel_mx64", "dynamixel_xl330", "waveshare_st3025"])
+def test_entry_export_matches_bam_export(part):
+    from partgap.export import mujoco_params_from_entry
+    from partgap.query import load_entry
+    e = load_entry(part)
+    params = e["identifications"]["m1"]["params"]
+    a = mujoco_params(part, params, kp=16, vin=e["part"]["nominal_vin"])
+    b = mujoco_params_from_entry(e, params, kp=16)
+    for k in a:
+        assert b[k] == pytest.approx(a[k], rel=1e-12) if a[k] is not None else b[k] is None

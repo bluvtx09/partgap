@@ -16,7 +16,8 @@
         "variant": {"type": "string", "description": "voltage / gear-ratio variant if the product name covers several"},
         "nominal_vin": {"type": "number", "description": "V"},
         "control": {"type": "string", "enum": ["voltage_p_firmware", "current_p_firmware"], "description": "how the firmware turns a goal position into motor drive"},
-        "bam_actuator": {"type": "string", "description": "actuator class name in BAM"}
+        "bam_actuator": {"type": "string", "description": "actuator class name in BAM"},
+        "firmware": {"type": "object", "description": "firmware constants of the position loop: error_gain (duty per rad per kp unit), max_pwm, default_max_velocity (goal rate limit, rad/s, null if none)"}
       }
     },
     "sources": {
@@ -79,6 +80,7 @@
         "heavier_load": {"type": "object"},
         "higher_kp": {"type": "object"},
         "unseen_trajectory": {"type": "object"},
+        "backdrive": {"type": "object", "description": "error in torque-off (back-driven fall) phases of lift_and_drop logs: fit that never saw lift_and_drop (heldout_off_deg) vs fit that did (seen_off_deg)"},
         "other_unit": {"type": ["object", "null"], "description": "only when a second unit of the same model exists"}
       }
     }

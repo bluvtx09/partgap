@@ -1,0 +1,259 @@
+{
+ "part": {
+  "firmware": {
+   "error_gain": 0.166,
+   "max_pwm": 0.97,
+   "default_max_velocity": 5.21553467881118
+  },
+  "id": "feetech_sts3215_7v4",
+  "manufacturer": "Feetech",
+  "model": "STS3215",
+  "variant": "7.4 V",
+  "nominal_vin": 7.4,
+  "control": "voltage_p_firmware",
+  "bam_actuator": "sts3215"
+ },
+ "sources": [
+  {
+   "name": "Rhoban BAM raw data",
+   "url": "https://huggingface.co/buckets/Gregwar/bam_data/resolve/feetech_sts3215_raw.zip",
+   "license": "not stated; see source",
+   "unit": "sts3215",
+   "lab": "Rhoban (U. Bordeaux)",
+   "n_logs": 100,
+   "bench": "single pendulum (tip mass on an arm), 6 s logs"
+  }
+ ],
+ "conditions": {
+  "kp": [
+   4.0,
+   8.0,
+   16.0,
+   32.0
+  ],
+  "vin": [
+   7.4,
+   7.4
+  ],
+  "load_inertia": [
+   0.0,
+   0.02439
+  ],
+  "gravity_torque_max": [
+   0.0,
+   1.595
+  ],
+  "temperature_c": null,
+  "trajectories": [
+   "brutal",
+   "lift_and_drop",
+   "sin_sin",
+   "sin_time_square",
+   "up_and_down"
+  ]
+ },
+ "identifications": {
+  "m1": {
+   "params": {
+    "kt": 1.180048219607993,
+    "error_gain_ratio": 1.0117890916466183,
+    "R": 2.4902779828713495,
+    "armature": 0.02607533251468318,
+    "q_offset": -0.04989949138915552,
+    "max_velocity": 5.284203366961045,
+    "command_delay": 0.0013335874034552837,
+    "friction_base": 0.05292174470527161,
+    "friction_viscous": 0.05872109551901758,
+    "model": "m1"
+   },
+   "fitter": "CMA-ES, 2001 evaluations",
+   "fit_on": "all",
+   "bam_commit": "e9a619d"
+  },
+  "m6": {
+   "params": {
+    "kt": 1.284345809871314,
+    "error_gain_ratio": 1.1718097759182582,
+    "R": 2.6692063995978113,
+    "armature": 0.022023711601925282,
+    "q_offset": -0.06655284590280977,
+    "max_velocity": 5.094624885055039,
+    "command_delay": 0.005034212628496479,
+    "friction_base": 0.054234654494352656,
+    "friction_stribeck": 0.002924500560380315,
+    "load_friction_motor": 0.08785679543383859,
+    "load_friction_external": 0.25341404000113016,
+    "load_friction_motor_stribeck": 0.045850524608997606,
+    "load_friction_external_stribeck": 0.0893096434710547,
+    "load_friction_motor_quad": 0.005595184169223154,
+    "load_friction_external_quad": 0.004446094854343378,
+    "dtheta_stribeck": 0.11063336611358227,
+    "alpha": 2.794556344715994,
+    "friction_viscous": 0.02702443879370201,
+    "model": "m6"
+   },
+   "fitter": "CMA-ES, 4009 evaluations",
+   "fit_on": "all",
+   "bam_commit": "e9a619d"
+  }
+ },
+ "error": {
+  "b0_deg": 390.13,
+  "m1_deg": 1.389,
+  "m6_deg": 0.88,
+  "basis": "random 80/20 split, 20 held-out logs, open-loop position MAE",
+  "by_condition": {
+   "m1": {
+    "kp": {
+     "16": 1.248,
+     "32": 0.996,
+     "4": 1.899,
+     "8": 1.367
+    },
+    "load": {
+     "0.0kg": 0.685,
+     "0.5kg": 1.22,
+     "1.1kg": 1.881
+    },
+    "trajectory": {
+     "brutal": 0.778,
+     "lift_and_drop": 2.255,
+     "sin_sin": 1.382,
+     "sin_time_square": 0.891,
+     "up_and_down": 1.582
+    },
+    "phase": {
+     "torque_on": 1.131,
+     "torque_off": 2.985
+    }
+   },
+   "m6": {
+    "kp": {
+     "16": 0.806,
+     "32": 0.792,
+     "4": 1.314,
+     "8": 0.867
+    },
+    "load": {
+     "0.0kg": 0.455,
+     "0.5kg": 0.905,
+     "1.1kg": 1.23
+    },
+    "trajectory": {
+     "brutal": 0.434,
+     "lift_and_drop": 2.007,
+     "sin_sin": 0.746,
+     "sin_time_square": 0.848,
+     "up_and_down": 0.689
+    },
+    "phase": {
+     "torque_on": 0.661,
+     "torque_off": 2.794
+    }
+   }
+  }
+ },
+ "transfer": {
+  "heavier_load": {
+   "m1": {
+    "ratio": 1.304,
+    "heldout_deg": 2.452
+   },
+   "m6": {
+    "ratio": 1.302,
+    "heldout_deg": 1.601
+   }
+  },
+  "higher_kp": {
+   "m1": {
+    "ratio": 1.085,
+    "heldout_deg": 1.08
+   },
+   "m6": {
+    "ratio": 1.06,
+    "heldout_deg": 0.84
+   }
+  },
+  "unseen_trajectory": {
+   "m1": {
+    "ratio": 2.157,
+    "heldout_deg": 4.863
+   },
+   "m6": {
+    "ratio": 3.431,
+    "heldout_deg": 6.887
+   }
+  },
+  "backdrive": {
+   "m1": {
+    "heldout_on_deg": 0.763,
+    "heldout_off_deg": 6.921,
+    "seen_on_deg": 0.8,
+    "seen_off_deg": 2.985
+   },
+   "m6": {
+    "heldout_on_deg": 0.396,
+    "heldout_off_deg": 10.144,
+    "seen_on_deg": 0.439,
+    "seen_off_deg": 2.794
+   }
+  },
+  "other_unit": {
+   "from": "feetech_sts3215_7v4",
+   "to": "feetech_sts3215_12v",
+   "all_logs_by_phase_deg": {
+    "m1": {
+     "own_insample": {
+      "all_deg": 1.1905637954833443,
+      "torque_on_deg": 0.39788145060226554,
+      "torque_off_deg": 5.210285609792668
+     },
+     "direct": {
+      "all_deg": 7.509428112194327,
+      "torque_on_deg": 4.05885022429512,
+      "torque_off_deg": 25.007437620710274
+     },
+     "friction_only": {
+      "all_deg": 4.410860664488424,
+      "torque_on_deg": 0.5081228981620003,
+      "torque_off_deg": 24.2017898256327
+     }
+    },
+    "m6": {
+     "own_insample": {
+      "all_deg": 1.1121324164292459,
+      "torque_on_deg": 0.9953135738664445,
+      "torque_off_deg": 1.704525135662202
+     },
+     "direct": {
+      "all_deg": 7.494273221819711,
+      "torque_on_deg": 3.743719324555836,
+      "torque_off_deg": 26.5134722918283
+     },
+     "friction_only": {
+      "all_deg": 4.410802337034951,
+      "torque_on_deg": 0.2884447983316408,
+      "torque_off_deg": 25.31543157687779
+     }
+    }
+   },
+   "note": "different lab, different unit, 12 V variant; tested on the 12 V held-out logs",
+   "m1": {
+    "own_fit_deg": 0.937,
+    "direct_deg": 4.773,
+    "friction_only_deg": 2.296,
+    "b0_deg": 12.264,
+    "direct_ratio": 5.094,
+    "friction_only_ratio": 2.451
+   },
+   "m6": {
+    "own_fit_deg": 0.934,
+    "direct_deg": 4.654,
+    "friction_only_deg": 2.295,
+    "b0_deg": 12.264,
+    "direct_ratio": 4.982,
+    "friction_only_ratio": 2.457
+   }
+  }
+ }
+}

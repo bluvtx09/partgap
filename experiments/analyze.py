@@ -57,6 +57,15 @@ def main():
                 for l, e in zip(logs, mine):
                     groups.setdefault(fn(l), []).append(e)
                 bc[key] = {g: round(float(deg(np.mean(v))), 3) for g, v in sorted(groups.items())}
+            # powered vs back-driven (torque off) samples, all logs
+            b_all = make_batch(logs)
+            offm = np.array([~e["torque_enable"].astype(bool) for e in b_all["entries"]])
+            refp = np.array([e["position"] for e in b_all["entries"]])
+            from partgap.evaluate import simulate as _s
+            posf = np.array(_s.Simulator(make_model(part, m, full["params"])).rollout_log(b_all, simulate_control=True)[0])
+            errf = np.abs(posf - refp)
+            bc["phase"] = {"torque_on": round(float(deg(errf[~offm].mean())), 3),
+                           "torque_off": round(float(deg(errf[offm].mean())), 3) if offm.any() else None}
             out["by_condition"][f"{part}/{m}"] = bc
             # Q1
             for split in ["heavy", "kp", "traj"]:

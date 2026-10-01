@@ -455,6 +455,10 @@
     "sin_sin": 1.605,
     "sin_time_square": 1.045,
     "up_and_down": 1.672
+   },
+   "phase": {
+    "torque_on": 1.337,
+    "torque_off": 1.776
    }
   },
   "dynamixel_mx64/m6": {
@@ -474,6 +478,10 @@
     "sin_sin": 0.308,
     "sin_time_square": 0.437,
     "up_and_down": 0.314
+   },
+   "phase": {
+    "torque_on": 0.334,
+    "torque_off": 1.214
    }
   },
   "dynamixel_mx106/m1": {
@@ -493,6 +501,10 @@
     "sin_sin": 0.806,
     "sin_time_square": 0.603,
     "up_and_down": 1.201
+   },
+   "phase": {
+    "torque_on": 0.805,
+    "torque_off": 2.093
    }
   },
   "dynamixel_mx106/m6": {
@@ -512,6 +524,10 @@
     "sin_sin": 0.241,
     "sin_time_square": 0.451,
     "up_and_down": 0.182
+   },
+   "phase": {
+    "torque_on": 0.276,
+    "torque_off": 1.388
    }
   },
   "dynamixel_xl330/m1": {
@@ -534,6 +550,10 @@
     "sin_time_square": 0.885,
     "steps": 1.749,
     "up_and_down": 2.125
+   },
+   "phase": {
+    "torque_on": 1.813,
+    "torque_off": 1.518
    }
   },
   "dynamixel_xl330/m6": {
@@ -556,6 +576,10 @@
     "sin_time_square": 0.719,
     "steps": 0.805,
     "up_and_down": 1.189
+   },
+   "phase": {
+    "torque_on": 0.968,
+    "torque_off": 2.601
    }
   },
   "feetech_sts3215_7v4/m1": {
@@ -576,6 +600,10 @@
     "sin_sin": 1.382,
     "sin_time_square": 0.891,
     "up_and_down": 1.582
+   },
+   "phase": {
+    "torque_on": 1.131,
+    "torque_off": 2.985
    }
   },
   "feetech_sts3215_7v4/m6": {
@@ -596,6 +624,10 @@
     "sin_sin": 0.746,
     "sin_time_square": 0.848,
     "up_and_down": 0.689
+   },
+   "phase": {
+    "torque_on": 0.661,
+    "torque_off": 2.794
    }
   },
   "feetech_sts3215_12v/m1": {
@@ -616,6 +648,10 @@
     "sin_sin": 0.287,
     "sin_time_square": 0.408,
     "up_and_down": 0.535
+   },
+   "phase": {
+    "torque_on": 0.398,
+    "torque_off": 5.21
    }
   },
   "feetech_sts3215_12v/m6": {
@@ -636,6 +672,10 @@
     "sin_sin": 0.257,
     "sin_time_square": 2.496,
     "up_and_down": 0.428
+   },
+   "phase": {
+    "torque_on": 0.995,
+    "torque_off": 1.705
    }
   },
   "waveshare_st3025/m1": {
@@ -656,6 +696,10 @@
     "sin_sin": 1.089,
     "sin_time_square": 1.417,
     "up_and_down": 1.047
+   },
+   "phase": {
+    "torque_on": 1.125,
+    "torque_off": 1.331
    }
   },
   "waveshare_st3025/m6": {
@@ -676,6 +720,10 @@
     "sin_sin": 0.73,
     "sin_time_square": 1.567,
     "up_and_down": 0.413
+   },
+   "phase": {
+    "torque_on": 0.865,
+    "torque_off": 1.071
    }
   }
  },

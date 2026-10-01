@@ -1,0 +1,199 @@
+{
+ "part": {
+  "firmware": {
+   "error_gain": 0.158,
+   "max_pwm": 0.9625,
+   "default_max_velocity": null
+  },
+  "id": "dynamixel_mx64",
+  "manufacturer": "ROBOTIS",
+  "model": "Dynamixel MX-64",
+  "variant": "",
+  "nominal_vin": 15.0,
+  "control": "voltage_p_firmware",
+  "bam_actuator": "mx64"
+ },
+ "sources": [
+  {
+   "name": "Rhoban BAM raw data",
+   "url": "https://huggingface.co/buckets/Gregwar/bam_data/resolve/mx64_raw.tgz",
+   "license": "not stated; see source",
+   "unit": "64_1",
+   "lab": "Rhoban (U. Bordeaux)",
+   "n_logs": 112,
+   "bench": "single pendulum (tip mass on an arm), 6 s logs"
+  }
+ ],
+ "conditions": {
+  "kp": [
+   4.0,
+   8.0,
+   16.0,
+   32.0
+  ],
+  "vin": [
+   15.0,
+   15.0
+  ],
+  "load_inertia": [
+   0.00412,
+   0.06388
+  ],
+  "gravity_torque_max": [
+   0.404,
+   3.132
+  ],
+  "temperature_c": [
+   41.0,
+   56.0
+  ],
+  "trajectories": [
+   "lift_and_drop",
+   "sin_sin",
+   "sin_time_square",
+   "up_and_down"
+  ]
+ },
+ "identifications": {
+  "m1": {
+   "params": {
+    "kt": 1.6348865769345968,
+    "R": 3.968445346768533,
+    "armature": 0.011937079421362646,
+    "q_offset": 0.015390288210013842,
+    "command_delay": 1.8628571347886298e-08,
+    "friction_base": 0.07613052722359875,
+    "friction_viscous": 0.018723094602094176,
+    "model": "m1"
+   },
+   "fitter": "CMA-ES, 2008 evaluations",
+   "fit_on": "all",
+   "bam_commit": "e9a619d"
+  },
+  "m6": {
+   "params": {
+    "kt": 1.5834487740301233,
+    "R": 2.3597687241553027,
+    "armature": 0.011406009869881176,
+    "q_offset": 0.009793815686156199,
+    "command_delay": 0.000518537443523974,
+    "friction_base": 0.06541130061063552,
+    "friction_stribeck": 0.03656413278684261,
+    "load_friction_motor": 0.39619731410613707,
+    "load_friction_external": 0.0108656015548478,
+    "load_friction_motor_stribeck": 0.010617767051605654,
+    "load_friction_external_stribeck": 0.18850871246646306,
+    "load_friction_motor_quad": 0.00425126380626094,
+    "load_friction_external_quad": 0.007892490147992459,
+    "dtheta_stribeck": 0.6939157756493848,
+    "alpha": 1.008396176767756,
+    "friction_viscous": 0.017815086786164513,
+    "model": "m6"
+   },
+   "fitter": "CMA-ES, 4009 evaluations",
+   "fit_on": "all",
+   "bam_commit": "e9a619d"
+  }
+ },
+ "error": {
+  "b0_deg": 9.876,
+  "m1_deg": 1.31,
+  "m6_deg": 0.493,
+  "basis": "random 80/20 split, 22 held-out logs, open-loop position MAE",
+  "by_condition": {
+   "m1": {
+    "kp": {
+     "16": 1.312,
+     "32": 0.972,
+     "4": 1.71,
+     "8": 1.646
+    },
+    "load": {
+     "0.4kg": 0.78,
+     "1.1kg": 1.293,
+     "1.6kg": 1.907
+    },
+    "trajectory": {
+     "lift_and_drop": 1.319,
+     "sin_sin": 1.605,
+     "sin_time_square": 1.045,
+     "up_and_down": 1.672
+    },
+    "phase": {
+     "torque_on": 1.337,
+     "torque_off": 1.776
+    }
+   },
+   "m6": {
+    "kp": {
+     "16": 0.461,
+     "32": 0.445,
+     "4": 0.551,
+     "8": 0.466
+    },
+    "load": {
+     "0.4kg": 0.362,
+     "1.1kg": 0.445,
+     "1.6kg": 0.584
+    },
+    "trajectory": {
+     "lift_and_drop": 0.863,
+     "sin_sin": 0.308,
+     "sin_time_square": 0.437,
+     "up_and_down": 0.314
+    },
+    "phase": {
+     "torque_on": 0.334,
+     "torque_off": 1.214
+    }
+   }
+  }
+ },
+ "transfer": {
+  "heavier_load": {
+   "m1": {
+    "ratio": 1.082,
+    "heldout_deg": 2.063
+   },
+   "m6": {
+    "ratio": 1.405,
+    "heldout_deg": 0.821
+   }
+  },
+  "higher_kp": {
+   "m1": {
+    "ratio": 1.064,
+    "heldout_deg": 1.034
+   },
+   "m6": {
+    "ratio": 1.195,
+    "heldout_deg": 0.532
+   }
+  },
+  "unseen_trajectory": {
+   "m1": {
+    "ratio": 5.737,
+    "heldout_deg": 7.564
+   },
+   "m6": {
+    "ratio": 5.625,
+    "heldout_deg": 4.857
+   }
+  },
+  "backdrive": {
+   "m1": {
+    "heldout_on_deg": 0.501,
+    "heldout_off_deg": 11.109,
+    "seen_on_deg": 0.407,
+    "seen_off_deg": 1.776
+   },
+   "m6": {
+    "heldout_on_deg": 0.182,
+    "heldout_off_deg": 7.203,
+    "seen_on_deg": 0.165,
+    "seen_off_deg": 1.214
+   }
+  },
+  "other_unit": null
+ }
+}

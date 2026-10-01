@@ -62,14 +62,20 @@ def main():
         other = None
         if part.startswith("feetech_sts3215"):
             q2 = a["q2"]
+            rob = json.load(open(os.path.join(ROOT, "results", "q2_robustness.json")))
             other = {"from": "feetech_sts3215_7v4", "to": "feetech_sts3215_12v",
+                     "all_logs_by_phase_deg": rob,
                      "note": "different lab, different unit, 12 V variant; tested on the 12 V held-out logs",
                      **{mm: {"own_fit_deg": r3(q2[mm]["own_deg"]), "direct_deg": r3(q2[mm]["direct_deg"]),
                              "friction_only_deg": r3(q2[mm]["friction_only_deg"]), "b0_deg": r3(q2[mm]["b0_deg"]),
                              "direct_ratio": r3(q2[mm]["direct_ratio_to_own"]),
                              "friction_only_ratio": r3(q2[mm]["friction_only_ratio_to_own"])} for mm in ["m1", "m6"]}}
+        from partgap.evaluate import make_model
+        act = make_model(part, "m1").actuator
+        firmware = {"error_gain": float(act.error_gain), "max_pwm": float(act.max_pwm),
+                    "default_max_velocity": float(act.default_max_velocity) if hasattr(act, "default_max_velocity") else None}
         entry = {
-            "part": {"id": part, "manufacturer": m["manufacturer"], "model": m["model"], "variant": m["variant"],
+            "part": {"firmware": firmware, "id": part, "manufacturer": m["manufacturer"], "model": m["model"], "variant": m["variant"],
                      "nominal_vin": m["nominal_vin"], "control": "voltage_p_firmware", "bam_actuator": m["bam_actuator"]},
             "sources": [{"name": m["src"], "url": m["url"], "license": "not stated; see source", "unit": logs[0]["motor"],
                          "lab": m["lab"], "n_logs": len(logs), "bench": "single pendulum (tip mass on an arm), 6 s logs"}],
@@ -82,6 +88,7 @@ def main():
             "transfer": {**{k: {mm: {"ratio": r3(a["q1"][f"{part}/{mm}/{s}"]["ratio"]),
                                      "heldout_deg": r3(a["q1"][f"{part}/{mm}/{s}"]["heldout_deg"])} for mm in ["m1", "m6"]}
                             for k, s in SPLIT_NAME.items()},
+                         "backdrive": {mm: {k: r3(v) for k, v in a["q1_mechanism"][f"{part}/{mm}"].items()} for mm in ["m1", "m6"]},
                          "other_unit": other},
         }
         json.dump(entry, open(os.path.join(ROOT, "db", "parts", f"{part}.json"), "w"), indent=1)

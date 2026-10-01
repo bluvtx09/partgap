@@ -36,7 +36,7 @@ def _nearest(groups, value):
 
 def lookup(part, kp, vin=None, inertia=None, gravity_torque=None, model="m1"):
     """Settings for `model` ('m1' native or 'm6' BAM) plus an error estimate and warnings."""
-    from .export import mjcf_snippet, mujoco_params
+    from .export import mjcf_snippet, mujoco_params_from_entry
 
     e = load_entry(part)
     c = e["conditions"]
@@ -45,7 +45,7 @@ def lookup(part, kp, vin=None, inertia=None, gravity_torque=None, model="m1"):
     out = {"part": part, "model": model, "kp": kp, "vin": vin, "warnings": []}
 
     if model == "m1":
-        p = mujoco_params(part, params, kp=kp, vin=vin)
+        p = mujoco_params_from_entry(e, params, kp=kp, vin=vin)
         out["mujoco"] = p
         out["mjcf"] = mjcf_snippet("joint", p)
         notes = []
@@ -85,8 +85,21 @@ def lookup(part, kp, vin=None, inertia=None, gravity_torque=None, model="m1"):
         f = tr["heavier_load"][model]["ratio"]
         out["warnings"].append(f"gravity torque {gravity_torque:g} N m is above the measured max "
                                f"{c['gravity_torque_max'][1]:.3g}. Holding out the heaviest load grew the error x{f:.2f}")
+    bd = tr["backdrive"][model]
+    out["warnings"].append(
+        f"back-driven motion (torque off, or the load driving the joint) is the weak spot: with this entry it is "
+        f"{e['error']['by_condition'][model]['phase']['torque_off']:.1f} deg vs {e['error']['by_condition'][model]['phase']['torque_on']:.1f} deg "
+        f"powered, and a fit that never saw a drop test was off by {bd['heldout_off_deg']:.0f} deg there. "
+        "If your robot falls, is pushed, or runs torque-off, identify your own unit including drop tests "
+        "(BAM's recorder): in our test, 2 calibration logs on top of a DB entry still left x1.7-2.2 the error of a full fit")
     if tr.get("other_unit") is None:
         out["warnings"].append("one physical unit measured: unit-to-unit spread is unknown for this part")
+    else:
+        ou = tr["other_unit"]["all_logs_by_phase_deg"][model]
+        out["warnings"].append(
+            f"STS3215 unit-to-unit test (7.4 V friction used on a 12 V unit from another lab, motor constants refit): powered "
+            f"{ou['friction_only']['torque_on_deg']:.1f} deg vs its own fit {ou['own_insample']['torque_on_deg']:.1f}, "
+            f"back-driven {ou['friction_only']['torque_off_deg']:.0f} deg vs {ou['own_insample']['torque_off_deg']:.0f}")
     return out
 
 

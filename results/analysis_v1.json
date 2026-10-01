@@ -455,6 +455,10 @@
     "sin_sin": 1.601,
     "sin_time_square": 1.037,
     "up_and_down": 1.677
+   },
+   "phase": {
+    "torque_on": 1.336,
+    "torque_off": 1.781
    }
   },
   "dynamixel_mx64/m6": {
@@ -474,6 +478,10 @@
     "sin_sin": 0.308,
     "sin_time_square": 0.437,
     "up_and_down": 0.314
+   },
+   "phase": {
+    "torque_on": 0.334,
+    "torque_off": 1.214
    }
   },
   "dynamixel_mx106/m1": {
@@ -493,6 +501,10 @@
     "sin_sin": 0.806,
     "sin_time_square": 0.603,
     "up_and_down": 1.201
+   },
+   "phase": {
+    "torque_on": 0.805,
+    "torque_off": 2.093
    }
   },
   "dynamixel_mx106/m6": {
@@ -512,6 +524,10 @@
     "sin_sin": 0.233,
     "sin_time_square": 0.473,
     "up_and_down": 0.215
+   },
+   "phase": {
+    "torque_on": 0.29,
+    "torque_off": 1.462
    }
   },
   "dynamixel_xl330/m1": {
@@ -534,6 +550,10 @@
     "sin_time_square": 0.885,
     "steps": 1.749,
     "up_and_down": 2.125
+   },
+   "phase": {
+    "torque_on": 1.813,
+    "torque_off": 1.519
    }
   },
   "dynamixel_xl330/m6": {
@@ -556,6 +576,10 @@
     "sin_time_square": 0.745,
     "steps": 0.778,
     "up_and_down": 1.229
+   },
+   "phase": {
+    "torque_on": 0.988,
+    "torque_off": 2.645
    }
   },
   "feetech_sts3215_7v4/m1": {
@@ -576,6 +600,10 @@
     "sin_sin": 1.382,
     "sin_time_square": 0.891,
     "up_and_down": 1.582
+   },
+   "phase": {
+    "torque_on": 1.131,
+    "torque_off": 2.985
    }
   },
   "feetech_sts3215_7v4/m6": {
@@ -596,6 +624,10 @@
     "sin_sin": 0.836,
     "sin_time_square": 1.112,
     "up_and_down": 0.773
+   },
+   "phase": {
+    "torque_on": 0.785,
+    "torque_off": 2.66
    }
   },
   "feetech_sts3215_12v/m1": {
@@ -616,6 +648,10 @@
     "sin_sin": 0.284,
     "sin_time_square": 0.412,
     "up_and_down": 0.54
+   },
+   "phase": {
+    "torque_on": 0.399,
+    "torque_off": 5.209
    }
   },
   "feetech_sts3215_12v/m6": {
@@ -636,6 +672,10 @@
     "sin_sin": 0.272,
     "sin_time_square": 2.523,
     "up_and_down": 0.393
+   },
+   "phase": {
+    "torque_on": 1.0,
+    "torque_off": 1.754
    }
   },
   "waveshare_st3025/m1": {
@@ -656,6 +696,10 @@
     "sin_sin": 1.089,
     "sin_time_square": 1.417,
     "up_and_down": 1.047
+   },
+   "phase": {
+    "torque_on": 1.125,
+    "torque_off": 1.331
    }
   },
   "waveshare_st3025/m6": {
@@ -676,7 +720,85 @@
     "sin_sin": 0.709,
     "sin_time_square": 1.613,
     "up_and_down": 0.411
+   },
+   "phase": {
+    "torque_on": 0.876,
+    "torque_off": 1.107
    }
+  }
+ },
+ "q1_mechanism": {
+  "dynamixel_mx64/m1": {
+   "heldout_on_deg": 0.5012257266965728,
+   "heldout_off_deg": 11.109345293086353,
+   "seen_on_deg": 0.41603288928168436,
+   "seen_off_deg": 1.78076543952654
+  },
+  "dynamixel_mx64/m6": {
+   "heldout_on_deg": 0.18225307480748104,
+   "heldout_off_deg": 7.202703821180103,
+   "seen_on_deg": 0.1652548329483704,
+   "seen_off_deg": 1.213720874862142
+  },
+  "dynamixel_mx106/m1": {
+   "heldout_on_deg": 0.2362053685769243,
+   "heldout_off_deg": 21.079003922598083,
+   "seen_on_deg": 0.22026100144501687,
+   "seen_off_deg": 2.0928212880543167
+  },
+  "dynamixel_mx106/m6": {
+   "heldout_on_deg": 0.1670994242821228,
+   "heldout_off_deg": 11.962089703058306,
+   "seen_on_deg": 0.13608226534435974,
+   "seen_off_deg": 1.46188547536416
+  },
+  "dynamixel_xl330/m1": {
+   "heldout_on_deg": 1.1734463113361624,
+   "heldout_off_deg": 7.7116459526205885,
+   "seen_on_deg": 1.1980181207400566,
+   "seen_off_deg": 1.5185728075564298
+  },
+  "dynamixel_xl330/m6": {
+   "heldout_on_deg": 0.47319307724958204,
+   "heldout_off_deg": 5.085480891375389,
+   "seen_on_deg": 0.65361694087138,
+   "seen_off_deg": 2.6454836173580234
+  },
+  "feetech_sts3215_7v4/m1": {
+   "heldout_on_deg": 0.7629325437836324,
+   "heldout_off_deg": 6.920582246908981,
+   "seen_on_deg": 0.7997304014948217,
+   "seen_off_deg": 2.9849803338599283
+  },
+  "feetech_sts3215_7v4/m6": {
+   "heldout_on_deg": 0.3957728860843191,
+   "heldout_off_deg": 10.144455962711621,
+   "seen_on_deg": 0.48087657302672443,
+   "seen_off_deg": 2.6601158597362753
+  },
+  "feetech_sts3215_12v/m1": {
+   "heldout_on_deg": 0.23453256566725098,
+   "heldout_off_deg": 24.51510707278277,
+   "seen_on_deg": 0.28458355402503016,
+   "seen_off_deg": 5.209270864253139
+  },
+  "feetech_sts3215_12v/m6": {
+   "heldout_on_deg": 0.172862084248199,
+   "heldout_off_deg": 30.468277207664254,
+   "seen_on_deg": 0.24611300474913475,
+   "seen_off_deg": 1.7543570400320305
+  },
+  "waveshare_st3025/m1": {
+   "heldout_on_deg": 0.6715031875284799,
+   "heldout_off_deg": 22.262023366589254,
+   "seen_on_deg": 0.596503086868262,
+   "seen_off_deg": 3.1833655770510894
+  },
+  "waveshare_st3025/m6": {
+   "heldout_on_deg": 0.5392958669930409,
+   "heldout_off_deg": 20.939681759765328,
+   "seen_on_deg": 0.5672423596180248,
+   "seen_off_deg": 2.624600615722943
   }
  }
 }

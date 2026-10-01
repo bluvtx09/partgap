@@ -45,6 +45,26 @@ def mujoco_params(part, params, kp, vin=None):
     }
 
 
+def mujoco_params_from_entry(entry, params, kp, vin=None):
+    """Same as mujoco_params, from a DB entry alone (no BAM import needed)."""
+    fw = entry["part"]["firmware"]
+    vin = entry["part"]["nominal_vin"] if vin is None else vin
+    kt, R = params["kt"], params["R"]
+    egr = params.get("error_gain_ratio", 1.0)
+    rate = params.get("max_velocity", fw.get("default_max_velocity"))
+    return {
+        "gain": float(fw["error_gain"] * egr * kp * vin * kt / R),
+        "forcerange": float(fw["max_pwm"] * vin * kt / R),
+        "damping": float(params["friction_viscous"] + kt ** 2 / R),
+        "damping_torque_off": float(params["friction_viscous"]),
+        "frictionloss": float(params["friction_base"]),
+        "armature": float(params["armature"]),
+        "command_delay": float(params.get("command_delay", 0.0)),
+        "goal_rate_limit": None if rate is None else float(rate),
+        "q_offset": float(params.get("q_offset", 0.0)),
+    }
+
+
 def mjcf_snippet(name, p):
     """XML for a hinge joint + position actuator using the settings above."""
     return (f'<joint name="{name}" type="hinge" damping="{p["damping"]:.6g}" '

@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+partgap/__init__.py
+partgap/evaluate.py
+partgap/export.py
+partgap/fit.py
+partgap/ingest.py
+partgap/query.py
+partgap.egg-info/PKG-INFO
+partgap.egg-info/SOURCES.txt
+partgap.egg-info/dependency_links.txt
+partgap.egg-info/entry_points.txt
+partgap.egg-info/requires.txt
+partgap.egg-info/top_level.txt
+tests/test_export.py
+tests/test_query.py
