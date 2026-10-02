@@ -96,13 +96,15 @@ def start_params(motor, m):
 
 
 def fit_v2(motor, m, logs, scale, seed=0):
-    """Fit protocol (PLAN.md): warm start from the PartGap entry (sigma 0.1) and a cold fit
-    (4 restarts, 2x budget); keep the one with the lower training error."""
+    """Fit protocol (PLAN.md, revision 1): from the PartGap entry with sigma 0.1 and with sigma 0.02,
+    plus a cold fit (4 restarts, 2x budget); keep the one with the lowest training error."""
     batch = make_batch(fit_logs(logs))
     b = max(40, int(BUDGET[m] * scale))
-    warm = fit(PART[motor], m, batch, budget=b, start=start_params(motor, m), seed=seed, sigma=0.1)
-    cold = fit(PART[motor], m, batch, budget=2 * b, restarts=4, seed=seed + 100)
-    p, s, _ = min(warm, cold, key=lambda r: r[1])
+    start = start_params(motor, m)
+    runs = [fit(PART[motor], m, batch, budget=b, start=start, seed=seed, sigma=0.1),
+            fit(PART[motor], m, batch, budget=b, start=start, seed=seed + 1, sigma=0.02),
+            fit(PART[motor], m, batch, budget=2 * b, restarts=4, seed=seed + 100)]
+    p, s, _ = min(runs, key=lambda r: r[1])
     return p, s
 
 
@@ -116,7 +118,10 @@ def _job_fit(args):
 def _job_cal(args):
     i, j, k, cal_logs, start, scale = args
     batch = make_batch(fit_logs(cal_logs))
-    p, _, _ = fit(PART["sts3215"], "m1", batch, budget=max(40, int(BUDGET["m1"] * scale)), start=start, sigma=0.1)
+    b = max(40, int(BUDGET["m1"] * scale))
+    runs = [fit(PART["sts3215"], "m1", batch, budget=b, start=start, sigma=0.1),
+            fit(PART["sts3215"], "m1", batch, budget=b, start=start, sigma=0.02, seed=1)]
+    p, _, _ = min(runs, key=lambda r: r[1])
     return (i, j, k), p
 
 
@@ -186,13 +191,13 @@ def main():
                     e = phase_mae(PART["sts3215"], "m1", cal[(i, j, k)], test)["all"]
                     res["calibration"][f"{i}->{j}/k{k}"] = {"err": e, "ref": ref, "ratio": e / ref}
 
-        # U5: D=32 logs vs the same condition with D=0, both predicted by the unit's own B fit (M6)
+        # U5: D=32 logs vs the same condition with D=0, both held out from the unit's own session-1 B fit (M6)
         for j in us:
-            if ("sts3215", j, 1, "D1") not in data:
+            if ("sts3215", j, 1, "D1") not in data or ("sts3215", j, 2, "B2") not in data:
                 continue
             p = fits[("sts3215", j, 1, "m6")]
             d32 = data[("sts3215", j, 1, "D1")]
-            d0 = [l for l in data[("sts3215", j, 1, "B1")] if l["name"].endswith("kp16_L2")]
+            d0 = [l for l in data[("sts3215", j, 2, "B2")] if l["name"].endswith("kp16_L2")]
             e32, e0 = phase_mae(PART["sts3215"], "m6", p, d32)["all"], phase_mae(PART["sts3215"], "m6", p, d0)["all"]
             res["u5"][j] = {"err_d32": e32, "err_d0": e0, "ratio": e32 / e0}
 

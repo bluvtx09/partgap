@@ -1,13 +1,15 @@
 """How does your SO-100/101 arm compare? Stopping hysteresis of shoulder_pan vs 193 public arms.
 
-    pip install "partgap[armcheck]"
-    partgap-armcheck <hf_user>/<dataset>          # a LeRobot dataset you recorded (public or cached token)
+    pip install "partgap[armcheck] @ git+https://github.com/bluvtx09/partgap"
+    partgap-armcheck <hf_user>/<dataset>          # a LeRobot dataset you recorded (private: set HF_TOKEN)
     partgap-armcheck --local path/to/dataset       # a dataset folder on disk
 
 Hysteresis = (position error after the joint stopped coming down) - (after it stopped going up), averaged
 over every pause in your episodes. It is how far the servo stops short, depending on the direction.
-The method is the same as the one behind the reference numbers (PartGap, studies/business_validation).
-Needs angles in degrees (LeRobot's `use_degrees=True`, the default for SO-100 datasets and current SO followers).
+The method is the same as the one behind the reference numbers (PartGap, studies/business_validation),
+including the requirement of 5 pauses per direction in both the even and the odd episodes.
+The reference holds SO-100 datasets (LeRobot v2.x, angles in degrees). SO-101 uses the same STS3215 servo, but
+SO-101 and v3.x datasets were not part of the reference. Needs angles in degrees (LeRobot `use_degrees=True`).
 """
 import argparse
 import io
@@ -107,7 +109,7 @@ def load_dataset(repo=None, local=None):
     return info, a[keep], s[keep], e[keep]
 
 
-def check(info, a_all, s_all, ep):
+def check(info, a_all, s_all, ep, degrees_confirmed=False):
     names = _names(info["features"]["action"])
     snames = _names(info["features"]["observation.state"])
     ja = next((i for i, x in enumerate(names) if x.split(".")[0].endswith("shoulder_pan")), None)
@@ -117,12 +119,20 @@ def check(info, a_all, s_all, ep):
     a, s = a_all[:, ja], s_all[:, js]
     if np.nanmax(np.abs(a)) > 400:
         raise SystemExit("Angles look like raw encoder ticks, not degrees. Record with degrees to use this check.")
+    if info.get("robot_type") != "so100" and np.nanmax(np.abs(a)) <= 100.5 and not degrees_confirmed:
+        raise SystemExit("All shoulder_pan values are within +-100. LeRobot's normalized mode (use_degrees=False) also "
+                         "gives that range, and then this check means nothing.\nIf you recorded in degrees, run again "
+                         "with --degrees.")
     fps = int(info["fps"])
-    items = []
+    halves = {0: [], 1: []}
     for e in np.unique(ep):
         m = ep == e
-        items += list(rests(a[m], s[m], fps))
-    return hysteresis(items)
+        halves[int(e) % 2] += list(rests(a[m], s[m], fps))
+    h_even, h_odd = hysteresis(halves[0]), hysteresis(halves[1])
+    h = hysteresis(halves[0] + halves[1])
+    if h_even[0] is None or h_odd[0] is None:                  # same rule as the reference arms
+        return None, h[1], h[2]
+    return h
 
 
 def main():
@@ -130,11 +140,12 @@ def main():
     ap.add_argument("repo", nargs="?", help="<hf_user>/<dataset>")
     ap.add_argument("--local", help="dataset folder on disk instead of the Hub")
     ap.add_argument("--json", action="store_true", help="machine-readable output")
+    ap.add_argument("--degrees", action="store_true", help="confirm the dataset angles are in degrees")
     a = ap.parse_args()
     if not a.repo and not a.local:
         ap.error("give a Hub dataset id or --local")
     info, act, st, ep = load_dataset(a.repo, a.local)
-    h, n_pos, n_neg = check(info, act, st, ep)
+    h, n_pos, n_neg = check(info, act, st, ep, a.degrees)
     ref = json.load(open(os.path.join(HERE, "armcheck_field.json")))
     H = np.array(ref["H"])
     out = {"dataset": a.repo or a.local, "robot_type": info.get("robot_type"), "episodes_used": int(len(np.unique(ep))),
@@ -146,14 +157,16 @@ def main():
         print(json.dumps(out))
         return
     if h is None:
-        print(f"Not enough pauses to measure ({n_pos} after moving up, {n_neg} after moving down; need 5 each).")
+        print(f"Not enough pauses to measure ({n_pos} after moving up, {n_neg} after moving down; need 5 of each "
+              "in both the even and the odd episodes).")
         print("Episodes where the arm stops and holds still for half a second or more work best.")
         sys.exit(1)
     print(f"shoulder_pan stopping hysteresis: {h:.2f} deg  ({n_pos} + {n_neg} pauses, {out['episodes_used']} episodes)")
     print(f"That is larger than {out['percentile_among_193_arms']:.0f}% of 193 public SO-100 arms "
           f"(median {out['reference_median_deg']:.2f} deg, middle half {np.percentile(H, 25):.2f}-{np.percentile(H, 75):.2f}).")
-    print("Note: if you recorded with use_degrees=False (normalized -100..100), this number is not in degrees and "
-          "the comparison does not hold.")
+    if info.get("robot_type") != "so100":
+        print(f"Note: the reference is SO-100 datasets only; yours is '{info.get('robot_type')}'. Same servo, "
+              "but the comparison is not validated for it.")
 
 
 if __name__ == "__main__":

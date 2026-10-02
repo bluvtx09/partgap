@@ -28,7 +28,7 @@ from bam.trajectory import trajectories as BAM_TRAJ  # noqa: E402
 FIT_TRAJ = ["lift_and_drop", "sin_time_square", "up_and_down", "sin_sin"]
 KPS = {"sts3215": [8, 16, 32], "xl330": [100, 200, 300]}
 LENGTHS = {"L1": 0.10, "L2": 0.15}
-XL_LENGTHS = {"L1": 0.11, "L2": 0.17}
+XL_LENGTHS = {"L1": 0.11, "L2": 0.17}                 # close to Rhoban's XL330 bench (0.11/0.14/0.17 m)
 
 
 class Hysteresis:
@@ -84,6 +84,7 @@ def record_log(servo, traj_name, kp, config, meta, path):
 
     # slow return to zero, then torque off
     q = data["entries"][-1]["position"]
+    servo.set_goal(q)                                        # goal = where the arm is, so re-enabling torque does not snap it
     servo.set_torque(True)
     while abs(q) > 1e-6:
         q = max(0.0, q - 0.01) if q > 0 else min(0.0, q + 0.01)
@@ -126,6 +127,16 @@ def run_session(servo, motor, unit, session, mass, arm_mass, vin, seller, outdir
         json.dump(servo.registers(), open(fpath, "w"), indent=1)
     servo.factory = json.load(open(fpath))
     first_regs = servo.registers()
+    try:
+        _run_steps(servo, motor, unit, session, steps, lens, mass, arm_mass, vin, seller, outdir, prompt, on_mount)
+    finally:                                                 # also on Ctrl-C or a bus error
+        servo.restore_factory()
+    json.dump(first_regs, open(os.path.join(outdir, motor, unit, f"s{session}", "registers_at_start.json"), "w"),
+              indent=1)
+
+
+def _run_steps(servo, motor, unit, session, steps, lens, mass, arm_mass, vin, seller, outdir, prompt, on_mount):
+    state = None
     for n, (block, config, plane, L, kp, tr) in enumerate(steps):
         if (plane, L) != state:
             msg = (f"\n>>> 지그를 {'수평(서보 축 세로)' if plane == 'horizontal' else '수직'}으로 두고, "
@@ -141,9 +152,6 @@ def run_session(servo, motor, unit, session, mass, arm_mass, vin, seller, outdir
         path = os.path.join(outdir, motor, unit, f"s{session}", block, f"{tr}_kp{kp}_{L}.json")
         print(f"[{n + 1}/{len(steps)}] {block} {config} {plane} {L} kp={kp} {tr}", flush=True)
         record_log(servo, tr, kp, config, meta, path)
-    servo.restore_factory()
-    json.dump(first_regs, open(os.path.join(outdir, motor, unit, f"s{session}", "registers_at_start.json"), "w"),
-              indent=1)
 
 
 def main():

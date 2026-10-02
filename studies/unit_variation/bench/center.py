@@ -4,7 +4,7 @@
 
 While it holds, fix the arm on the horn so it hangs straight down (vertical jig) or points along
 your reference line (horizontal jig). Press Enter to release. It also prints the position limits:
-they should allow +-90 deg around 0 (encoder 1024..3072).
+they should allow +-120 deg around 0 (encoder 683..3413): sin_sin reaches about +-94 deg.
 """
 import argparse
 import math
@@ -22,8 +22,8 @@ def main():
     regs = s.registers()
     lo, hi = regs.get("min_position_limit"), regs.get("max_position_limit")
     print(f"position limits (raw): {lo} .. {hi}")
-    if isinstance(lo, int) and isinstance(hi, int) and (lo > 1024 or (hi and hi < 3072)):
-        print("WARNING: limits do not cover +-90 deg. This servo may have been set up for an arm; "
+    if isinstance(lo, int) and isinstance(hi, int) and (lo > 683 or (hi and hi < 3413)):
+        print("WARNING: limits do not cover +-120 deg. This servo may have been set up for an arm; "
               "reset its limits (or use a new servo) before recording.")
     s.set_goal(0.0)
     s.set_torque(True)

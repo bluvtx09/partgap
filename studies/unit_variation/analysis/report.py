@@ -8,6 +8,8 @@ import sys
 
 import numpy as np
 
+from field_reference import field_range
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 STUDY = os.path.dirname(HERE)
 
@@ -38,8 +40,8 @@ def main(path):
     t_sts = out.get("T_sts3215_m6", {}).get("all")
     t_xl = out.get("T_xl330_m6", {}).get("all")
     out["U1"] = verdict_T(t_sts)
-    out["U2"] = ("데이터 없음" if t_xl is None else
-                 "Dynamixel이 더 균일" if (t_xl <= 1.2 and (t_sts is None or t_xl < t_sts)) else "아님")
+    out["U2"] = ("데이터 없음" if (t_xl is None or t_sts is None) else
+                 "Dynamixel이 더 균일" if (t_xl <= 1.2 and t_xl < t_sts) else "아님")
 
     # U3
     h = r["hysteresis"]
@@ -49,8 +51,10 @@ def main(path):
     if len(h1) >= 2:
         rng = float(np.ptp(list(h1.values())))
         retest = med([abs(h1[u] - h2[u]) for u in h1 if u in h2])
-        ref = field[str(len(h1))] if str(len(h1)) in field else field["5"]
-        if retest is not None and rng <= 2 * retest:
+        ref = field[str(len(h1))] if str(len(h1)) in field else field_range(len(h1))
+        if retest is None:
+            v = "데이터 없음 (재장착 측정 H2 없음)"
+        elif rng <= 2 * retest:
             v = "측정 잡음과 구분 안 됨"
         elif rng < ref["p25"]:
             v = "같은 설정에서는 현장보다 차이가 작다 (설정·조립 탓이 큼)"

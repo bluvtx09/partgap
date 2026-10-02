@@ -48,7 +48,7 @@ A는 판정에 넣지 않고 보고만 한다. 다만 A가 0이면 도구가 안
 
 ## 글 1: Reddit r/robotics
 
-**Title:** I compared 193 public SO-100 arms: the same STS3215 servo stops differently on every arm. You can check yours with one command
+**Title:** I compared 193 public SO-100 arms: with the same servo model, how precisely the arm stops varies a lot. Check yours with one command
 
 I've been working on why robot sims don't match real arms. One question kept coming up: if everyone uses the same servo, can one sim model fit every arm?
 
@@ -58,12 +58,12 @@ For every pause in every episode, I measured how far the servo stops short of it
 What I found:
 
 - The median arm stops with 0.41° of hysteresis. The middle half of the arms range from 0.19° to 0.71°, and the top 10% are at about 1.2° or more.
-- It's a stable property of each arm, not noise. When I split each arm's episodes into two halves, the two halves ranked the arms almost the same (Spearman 0.86).
-- It isn't explained by how fast people moved the arm (correlation 0.07).
+- Within each dataset it's consistent, not random noise. When I split each dataset's episodes into two halves, the two halves ranked the arms almost the same (Spearman 0.86). That shows the value is stable per dataset; it doesn't by itself prove the servo is the cause.
+- It isn't explained by how fast people moved the arm (correlation 0.07). Newer datasets tend to show less of it (correlation with recording date −0.32), which could mean settings or kit versions changed over time.
 
-So a sim tuned on one arm will be off on another. I can't yet say whether this comes from the servos themselves or from settings and assembly. I'm testing that next with several servos on one bench.
+So a sim tuned on one arm will likely be off on another. I can't yet say whether this comes from the servos themselves or from settings, voltage version and assembly. I'm testing that next with several servos on one bench.
 
-**Check your own arm** (works with SO-100 and SO-101 datasets recorded in degrees, i.e. `use_degrees=True`):
+**Check your own arm** (the reference is SO-100 datasets recorded in degrees; SO-101 uses the same servo and the tool runs on it, but that comparison isn't validated yet):
 
 ```
 pip install "partgap[armcheck] @ git+https://github.com/bluvtx09/partgap"
@@ -82,10 +82,10 @@ Method, data and code: https://github.com/bluvtx09/partgap/tree/main/studies/bus
 
 ## 글 2: Hugging Face 포럼 / LeRobot Discord
 
-**Title:** How different is your SO-100/101 arm? A one-command check against 193 public arms
+**Title:** How different is your SO-100/101 arm? A one-command check against 193 public SO-100 arms
 
 Hi all. I measured the stopping hysteresis of shoulder_pan on 193 public SO-100 datasets (one per uploader).
-It varies a lot between arms (median 0.41°, top 10% at about 1.2° or more) and it's consistent within each arm.
+It varies a lot between arms (median 0.41°, top 10% at about 1.2° or more) and it's consistent within each dataset. I don't know yet how much is the servo itself versus settings and assembly.
 That matters if you train in sim or share policies between arms.
 
 You can check your own arm from a dataset you've recorded:
@@ -95,7 +95,7 @@ pip install "partgap[armcheck] @ git+https://github.com/bluvtx09/partgap"
 partgap-armcheck <your_hf_user>/<your_dataset>
 ```
 
-It needs angles in degrees (`use_degrees=True`). If you try it, I'd love to hear your number and your servo voltage.
+It needs angles in degrees (`use_degrees=True`); the reference is SO-100 only, so SO-101 results are a rough comparison. If you try it, I'd love to hear your number and your servo voltage.
 
 One more question: would a 5-minute servo test that gives you sim parameters for *your* arm be useful to you? Yes / maybe / no, and what would it be worth to you?
 

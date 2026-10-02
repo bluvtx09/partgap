@@ -43,13 +43,13 @@ def unit_params(part, scale, session):
 def record_all(out):
     for unit, sc in STS_SCALE.items():
         for ses in (1, 2):
-            sv = SimServo("feetech_sts3215_7v4", "m6", unit_params("feetech_sts3215_7v4", sc, ses),
+            sv = SimServo("feetech_sts3215_7v4", "m6", unit_params("feetech_sts3215_7v4", sc, ses), 7.4,
                           seed=ses * 10 + int(unit[1]), dead_zone=STS_DZ[unit])
             run_session(sv, "sts3215", unit, ses, mass=0.5, arm_mass=0.03, vin=7.4, seller="sim", outdir=out,
                         prompt=False, on_mount=sv.mount)
     for unit, sc in XL_SCALE.items():
         for ses in (1, 2):
-            sv = SimServo("dynamixel_xl330", "m6", unit_params("dynamixel_xl330", sc, ses),
+            sv = SimServo("dynamixel_xl330", "m6", unit_params("dynamixel_xl330", sc, ses), 5.0,
                           seed=ses * 10 + int(unit[1]), dead_zone=1)
             run_session(sv, "xl330", unit, ses, mass=0.12, arm_mass=0.012, vin=5.0, seller="sim", outdir=out,
                         prompt=False, on_mount=sv.mount)

@@ -71,37 +71,38 @@ class STS3215(_Hardware):
         import rustypot
         return rustypot.Sts3215PyController(port, baudrate, 0.1)
 
-    def setup(self, config, kp):
-        s = STS_CONFIGS[config]
+    # every register a configuration may change; each log writes all of them, so nothing carries over
+    # from an earlier configuration (EEPROM keeps whatever was written last)
+    WRITTEN = ("p_coefficient", "d_coefficient", "i_coefficient", "maximum_acceleration", "acceleration",
+               "return_delay_time", "cw_dead_zone", "ccw_dead_zone")
+
+    def _write_all(self, values):
         c, i = self.c, self.id
         c.write_torque_enable(i, False)
-        c.write_lock(i, False)                                   # unlock EEPROM writes
-        c.write_p_coefficient(i, int(s.get("p", kp)))
-        c.write_d_coefficient(i, int(s["d"]))
-        c.write_i_coefficient(i, int(s["i"]))
+        c.write_lock(i, False)                               # unlock EEPROM writes
+        try:
+            for name in self.WRITTEN:
+                getattr(c, f"write_{name}")(i, int(values[name]))
+        finally:
+            c.write_lock(i, True)
+
+    def setup(self, config, kp):
+        """Factory values for everything, then the configuration's own changes on top."""
+        s = STS_CONFIGS[config]
+        v = {n: self.factory[n] for n in self.WRITTEN}
+        v["p_coefficient"] = s.get("p", kp)
+        v["d_coefficient"], v["i_coefficient"] = s["d"], s["i"]
         if "acceleration" in s:
-            c.write_maximum_acceleration(i, s["acceleration"])
-            c.write_acceleration(i, s["acceleration"])
+            v["maximum_acceleration"] = v["acceleration"] = s["acceleration"]
         if "return_delay" in s:
-            c.write_return_delay_time(i, s["return_delay"])
-        # dead zone: 0 for L0, otherwise the unit's own factory value (EEPROM keeps whatever was written last)
-        cw = s.get("dead_zone", self.factory["cw_dead_zone"])
-        ccw = s.get("dead_zone", self.factory["ccw_dead_zone"])
-        c.write_cw_dead_zone(i, int(cw))
-        c.write_ccw_dead_zone(i, int(ccw))
-        c.write_lock(i, True)
+            v["return_delay_time"] = s["return_delay"]
+        if "dead_zone" in s:
+            v["cw_dead_zone"] = v["ccw_dead_zone"] = s["dead_zone"]
+        self._write_all(v)
 
     def restore_factory(self):
-        """P, D, I and dead zone back to the values read on first contact."""
-        c, i, f = self.c, self.id, self.factory
-        c.write_torque_enable(i, False)
-        c.write_lock(i, False)
-        c.write_p_coefficient(i, int(f["p_coefficient"]))
-        c.write_d_coefficient(i, int(f["d_coefficient"]))
-        c.write_i_coefficient(i, int(f["i_coefficient"]))
-        c.write_cw_dead_zone(i, int(f["cw_dead_zone"]))
-        c.write_ccw_dead_zone(i, int(f["ccw_dead_zone"]))
-        c.write_lock(i, True)
+        """Every register this bench writes, back to the values read on first contact."""
+        self._write_all({n: self.factory[n] for n in self.WRITTEN})
 
     def set_goal(self, q):
         self.c.write_goal_position(self.id, float(q))
@@ -179,7 +180,7 @@ class SimServo:
 
     TICK = 2 * np.pi / 4096
 
-    def __init__(self, part, model_name, params, bus_dt=0.003, sub_dt=0.001, noise_ticks=0.5, seed=0,
+    def __init__(self, part, model_name, params, vin, bus_dt=0.003, sub_dt=0.001, noise_ticks=0.5, seed=0,
                  dead_zone=1):
         sys.path.insert(0, ROOT)
         from partgap.evaluate import make_model
@@ -187,6 +188,7 @@ class SimServo:
         self.motor = SOURCES[part][1]
         self.model = make_model(part, model_name, params)
         self.part = part
+        self.vin = vin
         self.bus_dt, self.sub_dt = bus_dt, sub_dt
         self.rng = np.random.default_rng(seed)
         self.noise_ticks = noise_ticks
@@ -199,7 +201,7 @@ class SimServo:
     def mount(self, load, horizontal):
         from bam import simulate
         log = {"mass": load["mass"], "arm_mass": load["arm_mass"], "length": load["length"],
-               "kp": 32, "vin": self.model.actuator.vin, "dt": self.sub_dt, "entries": []}
+               "kp": 32, "vin": self.vin, "dt": self.sub_dt, "entries": []}
         self.model.actuator.load_log(log)
         if horizontal:
             self.model.actuator.testbench.compute_bias = lambda q, dq: 0.0
