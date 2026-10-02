@@ -13,9 +13,14 @@ dependencies = ["numpy"]
 
 [project.optional-dependencies]
 fit = ["cmaes", "scipy", "mujoco", "jsonschema", "matplotlib"]
+armcheck = ["pyarrow"]
 
 [project.scripts]
 partgap = "partgap.query:main"
+partgap-armcheck = "partgap.armcheck:main"
 
 [tool.setuptools]
 packages = ["partgap"]
+
+[tool.setuptools.package-data]
+partgap = ["armcheck_field.json"]

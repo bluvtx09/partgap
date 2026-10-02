@@ -129,11 +129,26 @@ pytest
 - The raw-log licenses are not stated by their sources. This repo publishes only fitted parameters and summaries,
   and `scripts/fetch.sh` downloads the logs from their original locations.
 
+## Check your own SO-100/101 arm
+
+```bash
+pip install "partgap[armcheck] @ git+https://github.com/bluvtx09/partgap"
+partgap-armcheck <your_hf_user>/<your_dataset>
+```
+
+It measures the shoulder_pan stopping hysteresis in a LeRobot dataset you recorded (angles in degrees) and compares it
+with 193 public SO-100 arms (median 0.41°, middle half 0.19°–0.71°). How the reference was built:
+[`studies/business_validation/`](studies/business_validation/FINDINGS.md) (Korean).
+
 ## Studies
 
 - [`studies/phase4_gate/`](studies/phase4_gate/FINDINGS.md): can a different joint structure shrink the unit-to-unit gap?
   Linkage ratios and paralleled servos cut the powered gap by 40-53% but grew the back-driven gap 1.4-3.8x.
   The back-driven gap peaks when friction is comparable to the load (Korean).
+- [`studies/business_validation/`](studies/business_validation/FINDINGS.md): is the unit-to-unit problem real, and would
+  anyone pay to fix it? 193 public SO-100 arms differ 3.8x (P75/P25) in stopping hysteresis (Korean).
+- [`studies/unit_variation/`](studies/unit_variation/PLAN.md): pre-registered bench test of 5 STS3215 and 3 XL330 units
+  under identical settings. Recording and analysis code is ready and dry-run tested; measurements pending (Korean).
 
 ## Related
 

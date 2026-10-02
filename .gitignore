@@ -2,3 +2,5 @@ __pycache__/
 external/
 data/processed/
 *.pyc
+studies/unit_variation/dryrun/raw/
+studies/unit_variation/data/
