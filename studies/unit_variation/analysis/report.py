@@ -19,10 +19,18 @@ def med(xs):
     return float(np.median(xs)) if xs else None
 
 
-def verdict_T(t, big=1.5, small=1.2):
-    if t is None:
+FIELD_P25, FIELD_P50 = 0.19, 0.41      # field hysteresis (deg), PLAN.md revision 2
+
+
+def verdict_T(t, de):
+    """PLAN.md U1 (revision 2): ratio T and absolute extra error dE [deg], both pair medians."""
+    if t is None or de is None:
         return "데이터 없음"
-    return "크다" if t >= big else ("작다" if t <= small else "중간")
+    if t >= 1.5 and de >= FIELD_P50:
+        return "크다"
+    if t <= 1.2 or de <= FIELD_P25:
+        return "작다"
+    return "중간"
 
 
 def main(path):
@@ -35,13 +43,16 @@ def main(path):
         for m in ("m6", "m1"):
             rows = [v for k, v in r["transfer"].items() if k.startswith(f"{motor}/{m}/")]
             if rows:
-                out[f"T_{motor}_{m}"] = {ph: med([x[f"T_{ph}"] for x in rows]) for ph in ("all", "powered", "torque_off")}
-                out[f"T_{motor}_{m}"]["n_pairs"] = len(rows)
-    t_sts = out.get("T_sts3215_m6", {}).get("all")
-    t_xl = out.get("T_xl330_m6", {}).get("all")
-    out["U1"] = verdict_T(t_sts)
-    out["U2"] = ("데이터 없음" if (t_xl is None or t_sts is None) else
-                 "Dynamixel이 더 균일" if (t_xl <= 1.2 and t_xl < t_sts) else "아님")
+                d = {ph: med([x[f"T_{ph}"] for x in rows]) for ph in ("all", "powered", "torque_off")}
+                d["dE_deg"] = med([x["other"]["all"] - x["own"]["all"] for x in rows])
+                d["own_deg"] = med([x["own"]["all"] for x in rows])
+                d["n_pairs"] = len(rows)
+                d["verdict"] = verdict_T(d["all"], d["dE_deg"])
+                out[f"T_{motor}_{m}"] = d
+    sts, xl = out.get("T_sts3215_m6", {}), out.get("T_xl330_m6", {})
+    out["U1"] = sts.get("verdict", "데이터 없음")
+    out["U2"] = ("데이터 없음" if not sts or not xl else
+                 "Dynamixel이 더 균일" if (xl["verdict"] == "작다" and xl["dE_deg"] < sts["dE_deg"]) else "아님")
 
     # U3
     h = r["hysteresis"]
@@ -70,13 +81,14 @@ def main(path):
 
     # U4
     cal = r["calibration"]
-    curve = {}
+    curve, extra = {}, {}
     for k in (1, 2, 4, 8):
-        rat = [v["ratio"] for key, v in cal.items() if key.endswith(f"/k{k}")]
-        if rat:
-            curve[k] = med(rat)
-    need = next((k for k in sorted(curve) if curve[k] <= 1.2), None)
-    out["U4"] = {"median_ratio_by_k": curve,
+        rows = [v for key, v in cal.items() if key.endswith(f"/k{k}")]
+        if rows:
+            curve[k] = med([v["ratio"] for v in rows])
+            extra[k] = med([v["err"] - v["ref"] for v in rows])
+    need = next((k for k in sorted(curve) if curve[k] <= 1.2 or extra[k] <= FIELD_P25), None)
+    out["U4"] = {"median_ratio_by_k": curve, "median_extra_deg_by_k": extra,
                  "verdict": ("데이터 없음" if not curve else
                              f"로그 {need}개면 충분" if need else "짧은 키트로는 부족 (k=8에서도 1.2 초과)")}
 

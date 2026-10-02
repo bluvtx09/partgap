@@ -81,7 +81,7 @@ XL330은 `--servo xl330 --vin 5.0`, 추는 약 0.12 kg으로 바꾼다.
 ## 5단계: 분석
 
 ```bash
-python analysis/run.py          # 피팅 포함, 컴퓨터 2코어 기준 몇 시간
+python analysis/run.py          # 피팅 포함, 2코어 컴퓨터로 하루쯤
 python analysis/report.py       # PLAN.md의 판정 기준을 그대로 적용
 ```
 
