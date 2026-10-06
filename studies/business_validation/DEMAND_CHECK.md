@@ -40,7 +40,7 @@ A는 판정에 넣지 않고 보고만 한다. 다만 A가 0이면 도구가 안
 
 | 날짜 | 어디 | 링크 | A | B | C | 메모 |
 |---|---|---|---|---|---|---|
-| 2026-10-06 | r/robotics | https://www.reddit.com/user/bluvtx09/comments/1wyw5n4/i_compared_193_public_so100_arms_with_the_same/ | | | | 14일 집계일 2026-10-20 |
+| | r/robotics | | | | | 2026-10-06 시도 실패: 계정 나이 제한(계정 생성 1일). 프로필에만 올라감(https://www.reddit.com/user/bluvtx09/comments/1wyw5n4/), 집계 제외 |
 | | HF 포럼 | | | | | |
 | | LeRobot Discord | | | | | |
 
